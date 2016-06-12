@@ -1,0 +1,41 @@
+﻿body {background-color:#6F605A;
+      text-align:center
+}
+#menu{
+    margin: 0 auto;
+    width:60%;
+    height:30px;
+    background-color:#502F1E;
+}
+#tab {
+    float:left;
+}
+#test{color:red;}
+#logn{
+    height:30px;
+    line-height: 30px;
+    float:right;
+    color:white;
+    margin:auto;
+    top:0;
+    bottom:0;
+    right:10px;
+}
+
+
+#menu a:link { 
+    color:white;
+    text-decoration:none; 
+} 
+#menu a:visited { 
+    color:white; 
+    text-decoration:none; 
+} 
+#menu a:hover { 
+    color:#F78B25;
+    text-decoration:none; 
+} 
+#menu a:active { 
+    color:#FFFFFF; 
+    text-decoration:none; 
+} 
