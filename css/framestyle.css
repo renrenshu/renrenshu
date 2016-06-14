@@ -2,10 +2,33 @@
     background-color:#6F605A;
     text-align:center;
 }
-#top {
-    margin-left: auto;
-    margin-right: auto;
-    left:0;
-    right:0;
-    margin:auto;
+#Panel1 {
+    text-align:center;
+    left:20%;
+    right:20%;
+    position:absolute;
+    margin-left:auto;
+    margin-right:auto;
+    padding:0 0 0 0;
+    margin:0;
+}
+#tab{
+    padding:0 0 0 0;
+    
+    margin:0;
+}
+#top{
+    height:200px;
+    margin:0 0 0 0;
+    padding:0 0 0 0;
+}
+#left{
+    background-color:green;
+}
+#right{
+    background-color:yellow;
+}
+#_top{
+    width:100%;
+    height:100%;
 }
