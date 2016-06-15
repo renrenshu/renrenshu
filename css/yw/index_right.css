@@ -1,0 +1,34 @@
+﻿body {
+}
+#i_right{
+}
+.boder{
+    width:100%;
+    height:30px;
+    top:30px;
+    position:relative;
+}
+#lab1{
+    top:30px;
+    position:relative;
+}
+#information{
+    top:40px;
+    position:relative;
+    width:60%;
+    float:left;
+}
+#about{
+    top:30px;
+    position:relative;
+    width:35%;
+    float:right;
+}
+.xs_name{
+    width:70%;
+}
+.xs_price{
+    width:30%;
+}
+
+

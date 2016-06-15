@@ -1,0 +1,97 @@
+﻿body {
+}
+#lab1{
+    left:30px;
+    top:30px;
+    position:absolute;
+}
+.rec_book {
+    width:20%;
+    height:150px;
+    top:70px;
+    left:30px;
+    position:absolute;
+}
+#rec_div{
+    border:groove;
+    width:50%;
+    left:40%;
+    top:70px;
+    position:absolute;
+}
+
+#rec_text{
+    width:95%;
+    height:auto;
+}
+#rec_link{
+    float:right;
+}
+
+.rec_book1 {
+    width:20%;
+    height:150px;
+    top:270px;
+    left:30px;
+    position:absolute;
+}
+#virline1{
+    width:100%;
+    top:250px;
+    position:absolute;
+    border : 1px dashed #6F605A;
+}
+#rec_div1{
+    border:groove;
+    width:50%;
+    left:40%;
+    top:270px;
+    position:absolute;
+}
+
+#rec_text1{
+    width:95%;
+    height:auto;
+}
+#rec_link1{
+    float:right;
+}
+#virline2{
+    width:100%;
+    top:450px;
+    position:absolute;
+    border : 1px dashed #6F605A;
+}
+#newbook_div{
+    width:100%;
+    top:460px;
+    position:absolute;
+}
+#new_lab{
+    top:30px;
+    left:30px;
+    position:relative;
+}
+.newbook
+{
+    top:80px;
+    position:relative;
+}
+#newbook1{
+    width:20%;
+    height:150px;
+    left:10%;
+    position:absolute;
+}
+#newbook2{
+    width:20%;
+    height:150px;
+    left:40%;
+    position:absolute;
+}
+#newbook3{
+    width:20%;
+    height:150px;
+    left:70%;
+    position:absolute;
+}
