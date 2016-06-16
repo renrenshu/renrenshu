@@ -9,18 +9,18 @@
 </head>
 <body style="height: 483px; width: 498px;">
     <form id="form1" runat="server">
-    <div style="height: 498px; width: 319px;">
+    <div style="height: 498px; width: 491px;">
     
-     &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-        <asp:Label ID="Label1" runat="server" Text="自由发言区"></asp:Label>
+        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+        <asp:Label ID="Label1" runat="server" Text="自由发言区" Height="5%" Width="19%"></asp:Label>
         <br />
         <br />
-        <asp:TextBox ID="TextBox1" runat="server" Height="268px" Width="466px">历史发言区</asp:TextBox>
+        <asp:TextBox ID="TextBox1" runat="server" Height="40%" Width="94%">历史发言区</asp:TextBox>
         <br />
-        <asp:TextBox ID="TextBox2" runat="server" Height="108px" OnTextChanged="TextBox2_TextChanged" Width="402px">发言区</asp:TextBox>
+        <asp:TextBox ID="TextBox2" runat="server" Height="25%" OnTextChanged="TextBox2_TextChanged" Width="85%">发言区</asp:TextBox>
         <br />
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-        <asp:Button ID="Button1" runat="server" Height="25px" Text="提交" Width="50px" />
+        <asp:Button ID="Button1" runat="server" Height="5%" Text="提交" Width="10%" />
     
      </div>
     </form>

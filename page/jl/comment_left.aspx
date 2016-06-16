@@ -11,12 +11,11 @@
     <form id="form1" runat="server">
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
         <div style="height: 425px">
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-            <asp:Label ID="Label1" runat="server" Text="推荐书籍"></asp:Label>
+&nbsp;&nbsp;&nbsp;&nbsp;<asp:Label ID="Label1" runat="server" Text="推荐书籍" Height="5%" Width="40%"></asp:Label>
             <br />
             <br />
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-            <asp:Image ID="Image1" runat="server" Height="70px" ImageUrl="~/image/thumb3.gif" Width="90px" />
+            &nbsp;&nbsp;&nbsp;
+            <asp:Image ID="Image1" runat="server" Height="30%" ImageUrl="~/image/thumb3.gif" Width="50%" />
         </div>
     </form>
 </body>
