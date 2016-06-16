@@ -24,6 +24,12 @@
     width:35%;
     float:right;
 }
+#xs_tab{
+    border:#6F605A;
+    text-align:center;
+    top:50px;
+    position:relative;
+}
 .xs_name{
     width:70%;
 }

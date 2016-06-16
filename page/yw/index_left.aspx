@@ -17,7 +17,7 @@
             <asp:Panel ID="rec_div" runat="server" Width="50%">
                 <asp:Label ID="rec_lab" runat="server" Text="Label"></asp:Label>
                 <br />
-                <asp:TextBox ID="rec_text" runat="server" TextMode="MultiLine"></asp:TextBox>
+                <asp:TextBox ID="rec_text" runat="server" TextMode="MultiLine" ReadOnly="True"></asp:TextBox>
                 <br />
                 <a id ="rec_link">详情>></a>
             </asp:Panel>
@@ -27,7 +27,7 @@
             <asp:Panel ID="rec_div1" runat="server" Width="50%">
                 <asp:Label ID="rec_lab1" runat="server" Text="Label"></asp:Label>
                 <br />
-                <asp:TextBox ID="rec_text1" runat="server" TextMode="MultiLine"></asp:TextBox>
+                <asp:TextBox ID="rec_text1" runat="server" TextMode="MultiLine" ReadOnly="True"></asp:TextBox>
                 <br />
                 <a id ="rec_link1">详情>></a>
             </asp:Panel>

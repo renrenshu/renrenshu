@@ -20,7 +20,7 @@
             </asp:Panel>
             <asp:Panel ID="Panel1" runat="server">
                 <img class="boder" src="../../image/border.gif" />
-                <asp:Table ID="Table1" runat="server" Width="100%">
+                <asp:Table  ID="xs_tab" runat="server" Width="100%" BorderStyle="Dashed" GridLines="Horizontal">
                     <asp:TableRow runat="server">
                         <asp:TableCell runat="server" CssClass="xs_name">1</asp:TableCell>
                         <asp:TableCell runat="server" CssClass="xs_price">1</asp:TableCell>
