@@ -21,8 +21,8 @@
         <asp:TextBox ID="TextBox1" runat="server" Height="30%" OnTextChanged="TextBox1_TextChanged" Width="90%">图文要求</asp:TextBox>
     
         <br />
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-        <asp:Button ID="Button2" runat="server" Height="5%" Text="联系书主" Width="20%" />
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+        <asp:Button ID="Button2" runat="server" Height="5%" Text="联系书主" Width="25%" />
     
     </div>
         <div>
