@@ -17,11 +17,11 @@
                 <div id="tab">
                 <asp:Table ID="menutab" runat="server" BorderStyle="None" Height="30px">
                     <asp:TableRow runat="server">
-                        <asp:TableCell class="menu_a" runat="server" Height="30px" Width="50px"><a href="../page/index.aspx">首页</a></asp:TableCell>
-                        <asp:TableCell class="menu_a" runat="server" Height="30px" Width="50px"><a>书库</a></asp:TableCell>
-                        <asp:TableCell class="menu_a" runat="server" Height="30px" Width="50px"><a>悬赏</a></asp:TableCell>
-                        <asp:TableCell class="menu_a" runat="server" Height="30px" Width="50px"><a>评论区</a></asp:TableCell>
-                        <asp:TableCell class="menu_a" runat="server" Height="30px" Width="70px"><a>个人中心</a></asp:TableCell>
+                        <asp:TableCell cssclass="menu_a" runat="server" Height="30px" Width="50px"><a href="index.html" target ="_parent">首页</a></asp:TableCell>
+                        <asp:TableCell cssclass="menu_a" runat="server" Height="30px" Width="50px"><a href="book.html" target ="_parent">书库</a></asp:TableCell>
+                        <asp:TableCell cssclass="menu_a" runat="server" Height="30px" Width="50px"><a href="../jl/reward.html" target ="_parent">悬赏</a></asp:TableCell>
+                        <asp:TableCell cssclass="menu_a" runat="server" Height="30px" Width="50px"><a href="../jl/comment.html" target ="_parent">评论区</a></asp:TableCell>
+                        <asp:TableCell cssclass="menu_a" runat="server" Height="30px" Width="70px"><a>个人中心</a></asp:TableCell>
                     </asp:TableRow>
                 </asp:Table>
                 </div>
