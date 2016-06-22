@@ -26,7 +26,7 @@
                 </asp:Table>
                 </div>
                 <div id="logn">
-                   <a class="menu_a">登录</a>
+                   <a class="menu_a" href="../lxy/login.aspx" target ="_parent">登录</a>
                 </div>
             </div> 
     </form>

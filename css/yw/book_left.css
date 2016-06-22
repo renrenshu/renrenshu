@@ -1,0 +1,22 @@
+﻿body {
+}
+#book_left{
+    background-color:yellow;
+}
+#book_lab{
+    left:30px;
+    top:30px;
+    position:absolute;
+}
+#book_img{
+    width:25%;
+    left:30px;
+    top:50px;
+    position:absolute;
+}
+#book_details{
+    width:60%;
+    float:right;
+    right:50px;
+    position:relative;
+}
