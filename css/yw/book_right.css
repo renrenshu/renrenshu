@@ -1,0 +1,30 @@
+﻿body { 
+    padding-top: 70px; 
+}
+#sale_div{
+    width:140px;
+    margin-left:auto;
+    margin-right:auto;
+}
+#book_sale{
+    font-size:xx-large;
+    color:#6F605A;
+    font-weight:bold;
+    font-family:YouYuan;
+}
+#book{
+    left:10%;
+    position:relative;
+}
+#book_find{
+    height:50px;
+    width:70%;
+}
+#btn_find{
+    height:50px;
+    background-color:#6f605a;
+    font-size:x-large;
+    color:white;
+    font-weight:bold;
+    font-family:YouYuan;
+}

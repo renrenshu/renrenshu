@@ -1,0 +1,34 @@
+﻿body {
+}
+#add_book{
+    margin-left:auto;
+    margin-right:auto;
+    width:80%;
+    top:50px;
+    position:relative;
+}
+#title_div{
+    text-align:center;
+}
+#title_lab{
+    font-size:xx-large;
+    color:#6F605A;
+    font-weight:bold;
+    font-family:YouYuan;
+}
+#details{
+    margin-left:auto;
+    margin-right:auto;
+    width:100%;
+    font-size:larger;
+    color:#6F605A;
+    font-weight:bold;
+    font-family:YouYuan;
+}
+.text{
+    width:90%;
+    margin:10px,10px,0,0;
+}
+.sign{
+    color:red;
+}
