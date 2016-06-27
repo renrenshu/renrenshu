@@ -27,39 +27,39 @@
                     <asp:Panel ID="Panel2" runat="server">
                         <asp:Label ID="Label1" runat="server" Text="书   名："></asp:Label>
                         <br />
-                        <asp:TextBox ID="TextBox1" CssClass="text" runat="server"></asp:TextBox>
+                        <asp:TextBox ID="txt_name" CssClass="text" runat="server"></asp:TextBox>
                         <asp:Label ID="Label5" runat="server" CssClass="sign" Text="*"></asp:Label>
                     </asp:Panel>
                     <asp:Panel ID="Panel3" runat="server">
                         <asp:Label ID="Label2" runat="server" Text="作   者："></asp:Label>
                         <br />
-                        <asp:TextBox ID="TextBox2" CssClass="text" runat="server"></asp:TextBox>
+                        <asp:TextBox ID="txt_author" CssClass="text" runat="server"></asp:TextBox>
                         <asp:Label ID="Label6" runat="server" CssClass="sign" Text="*"></asp:Label>
                     </asp:Panel>
                     <asp:Panel ID="Panel4" runat="server">
                         <asp:Label ID="Label3" runat="server" Text="出版社："></asp:Label>
                         <br />
-                        <asp:TextBox ID="TextBox3" CssClass="text" runat="server"></asp:TextBox>
+                        <asp:TextBox ID="txt_press" CssClass="text" runat="server"></asp:TextBox>
                         <asp:Label ID="Label7" runat="server" CssClass="sign" Text="*"></asp:Label>
                     </asp:Panel>
                     <asp:Panel ID="Panel7" runat="server">
-                        <asp:Label ID="Label10" runat="server" Text="价格："></asp:Label>
+                        <asp:Label ID="Label10" runat="server" Text="价格(元)（该行只能填入数值）："></asp:Label>
                         <br />
-                        <asp:TextBox ID="TextBox5" CssClass="text" runat="server"></asp:TextBox>
+                        <asp:TextBox ID="txt_price" CssClass="text" runat="server" TextMode="Number"></asp:TextBox>
                         <asp:Label ID="Label11" runat="server" CssClass="sign" Text="*"></asp:Label>
                     </asp:Panel>
                     <asp:Panel ID="Panel5" runat="server">
                         <asp:Label ID="Label4" runat="server" Text="简介："></asp:Label>
                         <br />
-                        <asp:TextBox ID="TextBox4" CssClass="text" runat="server" TextMode="MultiLine"></asp:TextBox>
+                        <asp:TextBox ID="txt_jianjie" CssClass="text" runat="server" TextMode="MultiLine"></asp:TextBox>
                     </asp:Panel>
                     <asp:Panel ID="Panel6" runat="server">
                         <asp:Label ID="Label8" runat="server" Text="上传图片："></asp:Label>
-                        <asp:FileUpload ID="FileUpload1" runat="server" />
+                        <asp:FileUpload ID="fileup" runat="server" />
                         <asp:Label ID="Label12" runat="server" >暂只支持上传一张图片</asp:Label>
                         <br />
-                        <asp:Label ID="Label9" runat="server" Text=""></asp:Label>
-                        <asp:Button ID="Button1" runat="server" Text="确  定" OnClick="Button1_Click"/>
+                        <asp:Label ID="lblMessage" runat="server" Text=""></asp:Label>
+                        <asp:Button ID="submit" runat="server" Text="提交" OnClick="submit_Click"/>
                     </asp:Panel>
                 </asp:Panel>
             </asp:Panel>

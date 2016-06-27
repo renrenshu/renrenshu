@@ -1,4 +1,7 @@
 ﻿body {
+    margin:0,0,0,0;
+    padding:0,0,0,0;
+    border: none;
 }
 #book_left{
 }
@@ -75,5 +78,5 @@
 #book_text{
     left:30px;
     position:relative;
-    width:80%;
+    width:85%;
 }
