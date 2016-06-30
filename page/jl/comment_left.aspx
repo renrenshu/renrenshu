@@ -10,13 +10,22 @@
 <body style="width: 205px; height: 427px">
     <form id="form1" runat="server">
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-        <div style="height: 425px">
-&nbsp;&nbsp;&nbsp;&nbsp;<asp:Label ID="Label1" runat="server" Text="推荐书籍" Height="5%" Width="40%"></asp:Label>
-            <br />
-            <br />
+        <div style="height: 152px">
             &nbsp;&nbsp;&nbsp;
-            <asp:Image ID="Image1" runat="server" Height="30%" ImageUrl="~/image/thumb3.gif" Width="50%" />
+            <br />
+            <br />
+&nbsp;&nbsp;&nbsp; &nbsp;神评榜<br />
+            <br />
+&nbsp; 一、游客00001<br />
+&nbsp; 一、游客00001<br />
+&nbsp; 一、游客00001<br />
+            <br />
+            <br />
         </div>
+        <asp:Panel ID="Panel1" runat="server" Height="194px">
+            &nbsp;&nbsp;&nbsp;&nbsp; 天道酬勤榜<br /> 
+            <br />
+            &nbsp; 一、游客00010<br /> &nbsp; 二、游客00050<br /> &nbsp; 三、游客00060<br /> &nbsp; 四、游客00067</asp:Panel>
     </form>
 </body>
 </html>

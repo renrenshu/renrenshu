@@ -15,8 +15,8 @@
         }
     </style>
 </head>
-<body style="width: 321px; height: 565px; margin-bottom: 15px;">
-    <form id="form1" runat="server">
+<body style="width: 100%; height: 70%; margin-bottom: 15px;">
+    <form id="form1" runat="server" style = "width: 100%; height: 100%">
     <div style="height: 52px">
     
         <asp:Label ID="Label1" runat="server" Text="检 索" Height="40%" Width="20%"></asp:Label>

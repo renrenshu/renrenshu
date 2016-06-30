@@ -16,7 +16,7 @@
         <br />
         <br />
         <asp:Image ID="Image1" runat="server" Height="50%" ImageUrl="~/image/thumb3.gif" Width="50%" />
-        <asp:Button ID="Button1" runat="server" Text="详情" Width="15%" Height="5%" />
+        <asp:Button ID="Button1" runat="server" Text="放大" Width="15%" Height="5%" />
         <br />
         <asp:TextBox ID="TextBox1" runat="server" Height="30%" OnTextChanged="TextBox1_TextChanged" Width="90%">图文要求</asp:TextBox>
     
