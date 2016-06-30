@@ -5,6 +5,9 @@
     overflow-x:hidden;
     border: none;
 }
+.items-body {
+    margin-top: 60px;
+}
 #sale_div{
     width:140px;
     margin-left:auto;
@@ -18,6 +21,7 @@
 }
 #book{
     left:5%;
+    width:90%;
     position:relative;
 }
 #find{
@@ -44,9 +48,6 @@
 .book_img{
     width:100%;
     height:70%;
-}
-.book_more{
-    float:right;
 }
 #paging{
     text-align:center;
