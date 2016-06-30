@@ -20,21 +20,13 @@ public class Database
 
     public Database()
     {
-        if (conn == null)//判断连接是否为空
-        {
-            conn = new SqlConnection();
-            conn.ConnectionString = "Data Source=192.168.1.1; Initial Catalog=人人书; Persist Security Info=True; User ID=sa; Password=159357";//连接数据库的字符串 }
-            if (conn.State == ConnectionState.Closed)
-            {
-                conn.Open();//打开数据库连接
-            }
-        }
     }
  
 //下面这个方法是从数据库中查找数据的方法
  
     public DataSet query(string sql)
     {
+        open();//打开连接
         DataSet ds = new DataSet();//DataSet是表的集合
         SqlDataAdapter da = new SqlDataAdapter(sql,conn);//从数据库中查询
         da.Fill(ds);//将数据填充到DataSet
@@ -46,10 +38,12 @@ public class Database
  
     public bool update(string sql)
     {
+        open();//打开连接
         SqlCommand cmd = new SqlCommand();//表示要对数据源执行的SQL语句或存储过程
         cmd.CommandText = sql;//设置命令的文本
         cmd.CommandType = CommandType.Text;//设置命令的类型
         cmd.Connection = conn;//设置命令的连接
+        
         int x=cmd.ExecuteNonQuery();//执行SQL语句//返回一个影响行数
         close();//关闭连接
         if(x > 0)
@@ -59,7 +53,28 @@ public class Database
 
             return false;
     }
- 
+
+    //下面的connOpen()方法是打开数据库连接
+
+    public void open()
+    {
+        conn = new SqlConnection();
+        conn.ConnectionString = "Data Source=.; Initial Catalog=人人书; Persist Security Info=True; uid=sa; pwd=123456";//连接数据库的字符串 }
+        if (conn.State == ConnectionState.Closed)
+        {
+            //conn.Open();//打开数据库连接
+            try
+            {
+                conn.Open();
+            }
+            catch
+            {
+                Console.Write("连接失败");
+            }
+
+        }
+    } 
+
 //下面的connClose()方法是关闭数据库连接
  
     public void close()
@@ -114,7 +129,7 @@ public class Database
             if (picturePath != null)
             {
                 byte[] picByte = ImageToByte(picturePath);
-                string sql = "insert into Stacks (bname, bauthor, bpress, bprice, btime, bpicture) values ( '" + name + "', '" + author + "', '" + press + "', '" + price + "', '" + time + "', '" + picByte + "')";
+                string sql = "insert into Stacks (bno,bname, bauthor, bpress, bprice, btime, bpicture) values ( '"+ no + "','" + name + "', '" + author + "', '" + press + "', '" + price + "', '" + time + "', '" + picByte + "')";
                 if (update(sql))
 
                     return true;

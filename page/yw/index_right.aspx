@@ -20,10 +20,13 @@
             </asp:Panel>
             <asp:Panel ID="Panel1" runat="server">
                 <img class="boder" src="../../image/border.gif" />
-                <asp:Table ID="Table1" runat="server" Width="100%">
+                <asp:Panel ID="xs_text" runat="server">
+                    <asp:Label ID="xs_lab" runat="server" ForeColor="#6F605A" Font-Size="XX-Large" Font-Bold="True" Font-Names="楷体">悬赏榜</asp:Label>
+                </asp:Panel>
+                <asp:Table  ID="xs_tab" runat="server" Width="100%" BorderStyle="Dashed" GridLines="Horizontal">
                     <asp:TableRow runat="server">
-                        <asp:TableCell runat="server" CssClass="xs_name">1</asp:TableCell>
-                        <asp:TableCell runat="server" CssClass="xs_price">1</asp:TableCell>
+                        <asp:TableCell runat="server" CssClass="xs_name">悬赏图书</asp:TableCell>
+                        <asp:TableCell runat="server" CssClass="xs_price">赏金</asp:TableCell>
                     </asp:TableRow>
                     <asp:TableRow runat="server">
                         <asp:TableCell runat="server" CssClass="xs_name">1</asp:TableCell>

@@ -22,6 +22,7 @@
                         <asp:TableCell cssclass="menu_a" runat="server" Height="30px" Width="50px"><a href="../jl/reward.html" target ="_parent">悬赏</a></asp:TableCell>
                         <asp:TableCell cssclass="menu_a" runat="server" Height="30px" Width="50px"><a href="../jl/comment.html" target ="_parent">评论区</a></asp:TableCell>
                         <asp:TableCell cssclass="menu_a" runat="server" Height="30px" Width="70px"><a>个人中心</a></asp:TableCell>
+                        <asp:TableCell cssclass="menu_a" runat="server" Height="30px" Width="70px"><a>维护</a></asp:TableCell>
                     </asp:TableRow>
                 </asp:Table>
                 </div>

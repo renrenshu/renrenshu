@@ -1,4 +1,9 @@
 ﻿body {
+    border:none;
+    overflow-x: hidden;
+}
+#i_left{
+    border:none;
 }
 #lab1{
     left:30px;
@@ -36,7 +41,7 @@
     position:absolute;
 }
 #virline1{
-    width:100%;
+    width:90%;
     top:250px;
     position:absolute;
     border : 1px dashed #6F605A;
@@ -57,7 +62,7 @@
     float:right;
 }
 #virline2{
-    width:100%;
+    width:90%;
     top:450px;
     position:absolute;
     border : 1px dashed #6F605A;
