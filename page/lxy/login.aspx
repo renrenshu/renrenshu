@@ -34,7 +34,7 @@
             <table width="100%">
             <tr>
             <td class="auto-style3"></td>
-            <td align="center" class="auto-style4"><asp:Button ID="user_register_Button1" runat="server" Height="30px" Text="提交" Width="80px" /></td>
+            <td align="center" class="auto-style4"><asp:Button ID="user_register_Button1" runat="server" Height="30px" Text="提交" Width="80px" OnClick="user_register_Button1_Click" /></td>
             <td align="center" class="auto-style5"><asp:Button ID="user_register_Button2" runat="server" Height="30px" Text="返回" Width="80px" PostBackUrl="~/page/lxy/login.aspx" /></td>
             <td></td>
             </tr></table></div>
@@ -67,7 +67,7 @@
       </li></ul></div></li>
     <li class="user_main_r"><input class="IbtnEnterCssClass" id="IbtnEnter" 
     style="border-top-width: 0px; border-left-width: 0px; border-bottom-width: 0px; border-right-width: 0px" 
-    type="image" src="../../../image/Login/Images/user_botton.gif" name="IbtnEnter"/> </li></ul></dd>
+    type="image" src="../../../image/Login/Images/user_botton.gif" name="IbtnEnter" onclick="IbtnEnter_onclick"/> </li></ul></dd>
   <dd id="user_bottom">
   <ul>
     <li class="user_bottom_l"></li>

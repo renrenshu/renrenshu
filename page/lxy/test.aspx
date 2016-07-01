@@ -54,7 +54,7 @@
             <table width="100%">
             <tr>
             <td class="auto-style3"></td>
-            <td align="center" class="auto-style4"><asp:Button ID="user_register_Button1" runat="server" Height="30px" Text="提交" Width="80px" /></td>
+            <td align="center" class="auto-style4"><asp:Button ID="user_register_Button1" runat="server" Height="30px" Text="提交" Width="80px" OnClick="user_register_Button1_Click" /></td>
             <td align="center" class="auto-style5"><asp:Button ID="user_register_Button2" runat="server" Height="30px" Text="返回" Width="80px" PostBackUrl="~/page/lxy/login.aspx" /></td>
             <td></td>
             </tr></table>
