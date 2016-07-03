@@ -6,14 +6,13 @@
 <head runat="server">
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
     <link href="../../css/yw/book_left.css" rel="stylesheet" />
-    <!-- 新 Bootstrap 核心 CSS 文件 -->
-    <link rel="stylesheet" href="//cdn.bootcss.com/bootstrap/3.3.5/css/bootstrap.min.css"/>
-
+    <<!-- 新 Bootstrap 核心 CSS 文件 -->
+    <link href="../../bootstrap/css/bootstrap.min.css" rel="stylesheet" />
     <!-- jQuery文件。务必在bootstrap.min.js 之前引入 -->
-    <script src="//cdn.bootcss.com/jquery/1.11.3/jquery.min.js"></script>
-
+    <script src="../../Scripts/jquery-1.10.2.min.js"></script>
+    <script src="../../js/lxy/jquery.tmpl.min.js"></script>
     <!-- 最新的 Bootstrap 核心 JavaScript 文件 -->
-    <script src="//cdn.bootcss.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
+    <script src="../../bootstrap/js/bootstrap.min.js"></script>
     <title></title>
 </head>
 <body>

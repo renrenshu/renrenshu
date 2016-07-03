@@ -58,7 +58,7 @@
         <br />
         <br />
         <br />
-        <asp:TextBox ID="TextBox2" runat="server" Height="25%" OnTextChanged="TextBox2_TextChanged" Width="97%">发言区</asp:TextBox>
+        <asp:TextBox ID="TextBox2" runat="server" Height="25%" OnTextChanged="TextBox2_TextChanged" Width="97%" TextMode="MultiLine">发言区</asp:TextBox>
         <br />
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
         <asp:Button ID="Button1" runat="server" Height="5%" Text="提交" Width="10%" />

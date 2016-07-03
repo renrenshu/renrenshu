@@ -13,31 +13,31 @@
         <asp:Panel ID="i_left" runat="server" Width="30%" ForeColor="#6F605A" Height="100%">
             <asp:Label ID="lab1" runat="server"  ForeColor="#6F605A" Font-Size="Larger" Font-Bold="True" Font-Names="幼圆">推荐书籍：</asp:Label>
             <br />
-            <asp:Image cssclass="rec_book" runat="server" ImageUrl="~/image/thumb3.gif" />
+            <a href="book_left.aspx"><asp:Image cssclass="rec_book" runat="server" ImageUrl="~/image/thumb3.gif" /></a>
             <asp:Panel ID="rec_div" runat="server" Width="50%">
                 <asp:Label ID="rec_lab" runat="server" Text="Label"></asp:Label>
                 <br />
                 <asp:TextBox ID="rec_text" runat="server" TextMode="MultiLine" ReadOnly="True"></asp:TextBox>
                 <br />
-                <a id ="rec_link">详情>></a>
+                <a id ="rec_link" href="book_left.aspx">详情>></a>
             </asp:Panel>
             <br />
             <hr id="virline1" />
-            <asp:Image cssclass="rec_book1" runat="server" ImageUrl="~/image/thumb3.gif" />
+            <a href="book_left.aspx"><asp:Image cssclass="rec_book1" runat="server" ImageUrl="~/image/thumb3.gif" /></a>
             <asp:Panel ID="rec_div1" runat="server" Width="50%">
                 <asp:Label ID="rec_lab1" runat="server" Text="Label"></asp:Label>
                 <br />
                 <asp:TextBox ID="rec_text1" runat="server" TextMode="MultiLine" ReadOnly="True"></asp:TextBox>
                 <br />
-                <a id ="rec_link1">详情>></a>
+                <a id ="rec_link1" href="book_left.aspx">详情>></a>
             </asp:Panel>
             <hr id="virline2" />
             <asp:Panel ID="newbook_div" runat="server">
                 <asp:Label ID="new_lab" runat="server" ForeColor="#6F605A" Font-Size="Larger" Font-Bold="True" Font-Names="幼圆">最新上架:</asp:Label>
                 <br />
-                <asp:Image ID="newbook1" CssClass="newbook" runat="server" ImageUrl="~/image/thumb3.gif" />
-                <asp:Image ID="newbook2" CssClass="newbook" runat="server" ImageUrl="~/image/thumb3.gif"/>
-                <asp:Image ID="newbook3" CssClass="newbook" runat="server" ImageUrl="~/image/thumb3.gif" />
+                <a href="book_left.aspx"><asp:Image ID="newbook1" CssClass="newbook" runat="server" ImageUrl="~/image/thumb3.gif" /></a>
+                <a href="book_left.aspx"><asp:Image ID="newbook2" CssClass="newbook" runat="server" ImageUrl="~/image/thumb3.gif"/></a>
+                <a href="book_left.aspx"><asp:Image ID="newbook3" CssClass="newbook" runat="server" ImageUrl="~/image/thumb3.gif" /></a>
             </asp:Panel>
         </asp:Panel>
     </form>

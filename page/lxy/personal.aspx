@@ -10,15 +10,15 @@
     <style type="text/css">
         .auto-style1 {
             width: 20%;
-            height: 338px;
+            height: 793px;
         }
         .auto-style3 {
             width: 45%;
-            height: 338px;
+            height: 793px;
         }
         .auto-style4 {
             width: 15%;
-            height: 338px;
+            height: 793px;
         }
     </style>
 </head>
@@ -31,11 +31,11 @@
             <div id="tab">
             <asp:Table ID="menutab" runat="server" BorderStyle="none" Height="30px">
                 <asp:TableRow runat="server">
-                    <asp:TableCell class="menu_a" runat="server" Height="30px" Width="50px"><a href="../page/index.aspx">首页</a></asp:TableCell>
-                    <asp:TableCell class="menu_a" runat="server" Height="30px" Width="50px"><a>书库</a></asp:TableCell>
-                    <asp:TableCell class="menu_a" runat="server" Height="30px" Width="50px"><a>悬赏</a></asp:TableCell>
-                    <asp:TableCell class="menu_a" runat="server" Height="30px" Width="50px"><a>评论区</a></asp:TableCell>
-                    <asp:TableCell class="menu_a" runat="server" Height="30px" Width="70px"><a>个人中心</a></asp:TableCell>
+                    <asp:TableCell cssclass="menu_a" runat="server" Height="30px" Width="50px"><a href="index.html" target ="_parent">首页</a></asp:TableCell>
+                        <asp:TableCell cssclass="menu_a" runat="server" Height="30px" Width="50px"><a href="book.html" target ="_parent">书库</a></asp:TableCell>
+                        <asp:TableCell cssclass="menu_a" runat="server" Height="30px" Width="50px"><a href="../jl/reward.html" target ="_parent">悬赏</a></asp:TableCell>
+                        <asp:TableCell cssclass="menu_a" runat="server" Height="30px" Width="50px"><a href="../jl/comment.html" target ="_parent">评论区</a></asp:TableCell>
+                        <asp:TableCell cssclass="menu_a" runat="server" Height="30px" Width="70px"><a href="../lxy/personal.aspx" target="_parent">个人中心</a></asp:TableCell>
                 </asp:TableRow>
             </asp:Table>
             </div>
@@ -72,9 +72,9 @@
                     </asp:TreeView>
 
                 </td>
-                <td class="auto-style3" style="border-style: none">
+                <td class="auto-style3" id="right" style="border-style: none">
 
-                    <asp:MultiView ID="MultiView1" runat="server">
+                    <asp:MultiView  ID="MultiView1" runat="server">
                         <asp:View ID="View1" runat="server">  
                             11111
                         </asp:View>

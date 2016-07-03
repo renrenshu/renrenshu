@@ -7,12 +7,12 @@
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
     <link href="../../css/yw/book_right.css" rel="stylesheet" />
     <!-- 新 Bootstrap 核心 CSS 文件 -->
-    <link rel="stylesheet" href="//cdn.bootcss.com/bootstrap/3.3.5/css/bootstrap.min.css"/>
+    <link href="../../bootstrap/css/bootstrap.min.css" rel="stylesheet" />
     <!-- jQuery文件。务必在bootstrap.min.js 之前引入 -->
-    <script src="//cdn.bootcss.com/jquery/1.11.3/jquery.min.js"></script>
+    <script src="../../Scripts/jquery-1.10.2.min.js"></script>
     <script src="../../js/lxy/jquery.tmpl.min.js"></script>
     <!-- 最新的 Bootstrap 核心 JavaScript 文件 -->
-    <script src="//cdn.bootcss.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
+    <script src="../../bootstrap/js/bootstrap.min.js"></script>
     <title></title>
 </head>
 <body>
@@ -52,8 +52,8 @@
     <script id="gooods-item" type="text/x-jquery-tmpl">
             <!-- item -->
         <div class="col-lg-4 book_div">
-            <a href="#" class="thumbnail">
-                <img class="book_img" src="${ image }" />
+            <a href="book_left.aspx" target="_left"  class="thumbnail">
+                <img class="book_img" src="${ picture }" />
             </a>
             <asp:Panel ID="Panel2" runat="server">
                 <asp:Label ID="Label1" runat="server" Text="价格">${ price }</asp:Label>
@@ -66,18 +66,16 @@
     </script> 
     <script>
         $(function () {
+            var a = <%=func()%>
+            alert(a);
             var container = $("#items-container");
+            //data = [
+            //    { "image": "../../image/thumb3.gif", "price": "5", "name": "asd" },
+            //    { "image": "../../image/thumb3.gif", "price": "5", "name": "asd" },
+            //    { "image": "../../image/thumb3.gif", "price": "5", "name": "asd" },
+            //];
 
-            data = [
-                { "image": "../../image/thumb3.gif", "price": "5", "name": "asd" },
-                { "image": "../../image/thumb3.gif", "price": "5", "name": "asd" },
-                { "image": "../../image/thumb3.gif", "price": "5", "name": "asd" },
-                { "image": "../../image/thumb3.gif", "price": "5", "name": "asd" },
-                { "image": "../../image/thumb3.gif", "price": "5", "name": "asd" },
-                { "image": "../../image/thumb3.gif", "price": "5", "name": "asd" }
-            ];
-
-            $("#gooods-item").tmpl(data).appendTo("#items-container");
+            $("#gooods-item").tmpl(a).appendTo("#items-container");
 
         });
     </script>

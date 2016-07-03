@@ -9,7 +9,7 @@ using System.Web.UI.WebControls;
 
 public partial class page_yw_AddBook : System.Web.UI.Page
 {
-    string noimg = "../../image/nophoto.jpg";
+    string noimg = "F:/code/renrenshu/image/nophoto.jpg";
     Database ba = new Database();
     protected void Page_Load(object sender, EventArgs e)
     {
@@ -49,15 +49,15 @@ public partial class page_yw_AddBook : System.Web.UI.Page
                 {
                     System.IO.Directory.CreateDirectory(savePath);
                 }
-                savePath = savePath + "\\" + fileup.FileName;
+                savePath = savePath + "\\"+ fileup.FileName;
                 fileup.SaveAs(savePath);
                 Response.Write(fileup.PostedFile.FileName);
-                check = ba.Add(1, 1, txt_name.Text.Trim(), txt_author.Text.Trim(), txt_press.Text.Trim(),
+                check = ba.Add(1, txt_name.Text.Trim(), txt_author.Text.Trim(), txt_press.Text.Trim(),
                     price, savePath);
             }
             else
             {
-                check = ba.Add(1, 1, txt_name.Text.Trim(), txt_author.Text.Trim(), txt_press.Text.Trim(),
+                check = ba.Add(1, txt_name.Text.Trim(), txt_author.Text.Trim(), txt_press.Text.Trim(),
                     price, noimg);
             }
             if(check==true)

@@ -19,7 +19,7 @@ public class Users
     public void open()
     {
         conn = new SqlConnection();
-        conn.ConnectionString = "Data Source=.; Initial Catalog=人人书; uid=sa; pwd=159357";//连接数据库的字符串 }
+        conn.ConnectionString = "Data Source=.; Initial Catalog=人人书; uid=sa; pwd=123456";//连接数据库的字符串 }
         if (conn.State == ConnectionState.Closed)
             {//判断数据库的连接状态，如果状态是关闭的话就将它打开
                 conn.Open();//打开数据库连接

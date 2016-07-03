@@ -56,6 +56,7 @@
                     <asp:Panel ID="Panel6" runat="server">
                         <asp:Label ID="Label8" runat="server" Text="上传图片："></asp:Label>
                         <asp:FileUpload ID="fileup" runat="server" />
+                        <br />
                         <asp:Label ID="Label12" runat="server" >暂只支持上传一张图片</asp:Label>
                         <br />
                         <asp:Label ID="lblMessage" runat="server" Text=""></asp:Label>

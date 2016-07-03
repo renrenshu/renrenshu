@@ -29,7 +29,7 @@ public class Database
         open();//打开连接
         DataSet ds = new DataSet();//DataSet是表的集合
         SqlDataAdapter da = new SqlDataAdapter(sql,conn);//从数据库中查询
-        da.Fill(ds);//将数据填充到DataSet
+        da.Fill(ds,"base");//将数据填充到DataSet
         close();//关闭连接
         return ds;//返回结果
     }
@@ -117,7 +117,7 @@ public class Database
             return false;
     }
 
-    public bool Add(int tableName, int no, string name, string author, string press, float price, string picturePath)
+    public bool Add(int tableName, string name, string author, string press, float price, string picturePath)
     //函数名：Add
     //功能：  添加书籍/悬赏信息到数据库中
     //输入参数： tableName: 表明（书库为1，榜单为2）;name: 书名； author： 作者； press： 出版社；price： 欲售价格；  picturePath： 图片绝对地址；
@@ -128,8 +128,8 @@ public class Database
         {
             if (picturePath != null)
             {
-                byte[] picByte = ImageToByte(picturePath);
-                string sql = "insert into Stacks (bno,bname, bauthor, bpress, bprice, btime, bpicture) values ( '"+ no + "','" + name + "', '" + author + "', '" + press + "', '" + price + "', '" + time + "', '" + picByte + "')";
+                //byte[] picByte = ImageToByte(picturePath);
+                string sql = "insert into Stack (bname, bauthor, bpress, bprice, btime, bpicture) values ( '" + name + "', '" + author + "', '" + press + "', '" + price + "', '" + time + "', '" + picturePath + "')";
                 if (update(sql))
 
                     return true;
