@@ -38,12 +38,19 @@
         <asp:Panel ID="Panel1" CssClass="clear" runat="server"></asp:Panel>
         <asp:Panel ID="Panel25" runat="server">
             <asp:Panel ID="paging" runat="server">
-                <asp:Label ID="Label25" runat="server" ><a>1</a></asp:Label>
-                <asp:Label ID="Label26" runat="server" ><a>2</a></asp:Label>
-                <asp:Label ID="Label27" runat="server" ><a>3</a></asp:Label>
-                <asp:Label ID="Label28" runat="server" ><a>...</a></asp:Label>
-                <asp:Label ID="Label29" runat="server" ><a>6</a></asp:Label>
-                <asp:Label ID="Label30" runat="server" ><a>下一页</a></asp:Label>
+                <asp:Label ID="Label3" runat="server" Text="当前第"></asp:Label>
+                <asp:Label ID="Label4" runat="server" Text="<%# pagecurrent %>"></asp:Label>
+                <asp:Label ID="Label5" runat="server" Text="页/共："></asp:Label>
+                <asp:Label ID="Label6" runat="server" Text="<%# pagecount %>"></asp:Label>
+                <asp:Label ID="Label7" runat="server" Text="页"></asp:Label>
+                <asp:Button ID="Button1" runat="server" Text="首页" OnClick="Button1_Click" />
+                <asp:Button ID="Button2" runat="server" Text="上一页" OnClick="Button2_Click" />
+                <asp:Button ID="Button3" runat="server" Text="下一页" OnClick="Button3_Click" />
+                <asp:Button ID="Button4" runat="server" Text="尾页" OnClick="Button4_Click" />
+                <asp:Label ID="Label8" runat="server" Text="转到第"></asp:Label>
+                <asp:TextBox ID="txtpage" runat="server" Width="20px"></asp:TextBox>
+                <asp:Label ID="Label9" runat="server" Text="页。"></asp:Label>
+                <asp:Button ID="Button5" runat="server" Text="Go" OnClick="Button5_Click" />
             </asp:Panel>
         </asp:Panel>
     </div>
@@ -52,7 +59,7 @@
     <script id="gooods-item" type="text/x-jquery-tmpl">
             <!-- item -->
         <div class="col-lg-4 book_div">
-            <a href="book_left.aspx" target="_left"  class="thumbnail">
+            <a href="book_left.aspx?id=${ no }" target="_left"  class="thumbnail">
                 <img class="book_img" src="${ picture }" />
             </a>
             <asp:Panel ID="Panel2" runat="server">
@@ -67,12 +74,12 @@
     <script>
         $(function () {
             var a = <%=func()%>
-            alert(a);
             var container = $("#items-container");
+
             //data = [
-            //    { "image": "../../image/thumb3.gif", "price": "5", "name": "asd" },
-            //    { "image": "../../image/thumb3.gif", "price": "5", "name": "asd" },
-            //    { "image": "../../image/thumb3.gif", "price": "5", "name": "asd" },
+            //    { "picture": "../../upload/1.png", "price": "5", "name": "asd" },
+            //    { "picture": "../../upload/1.png", "price": "5", "name": "asd" },
+            //    { "picture": "../../upload/1.png", "price": "5", "name": "asd" },
             //];
 
             $("#gooods-item").tmpl(a).appendTo("#items-container");
