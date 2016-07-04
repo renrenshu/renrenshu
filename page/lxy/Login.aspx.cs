@@ -26,10 +26,33 @@ public partial class page_lxy_log : System.Web.UI.Page
         }
     }
 
-    protected void IbtnEnter_onclick(object sender, EventArgs e)
+    protected void IbtnEnter_Onclick(object sender, ImageClickEventArgs e)
     {
         DataSet ds = new DataSet();
         Users people = new Users();
-        ds = people.query("SELECT * FORM UserInformation");
+        string id;
+        bool stuta = false;
+        ds = people.query();
+        foreach (DataRow row in ds.Tables["UserInformation"].Rows)
+        {
+            if (row["uname"].ToString() == Request["TxtUserName"].ToString())
+            {
+                stuta = true;
+                if (row["upassword"].ToString() == Request["TxtPassword"].ToString())
+                {
+                    Response.Write("<script>alert('登录成功!')</script>");
+                    id = row["uname"].ToString();
+                    //关闭该界面，将id传入上一界面并将其visible属性设置为ture
+                }
+                else 
+                {
+                    Response.Write("<script>alert('用户名或密码不正确!')</script>");
+                }
+            }
+        }
+        if(!stuta)
+        {
+            Response.Write("<script>alert('用户名不存在，请注册')</script>");
+        }
     }
 }

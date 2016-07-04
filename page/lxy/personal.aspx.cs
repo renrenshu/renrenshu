@@ -16,9 +16,12 @@ public partial class page_lxy_personal : System.Web.UI.Page
     {
         if (TreeView1.SelectedNode.Text == "我的信息")
         {
+            MultiView1.ActiveViewIndex = 0;
+        }
+        if (TreeView1.SelectedNode.Text == "我是卖家")
+        { 
             MultiView1.ActiveViewIndex = 1;
         }
-        //if (TreeView1.SelectedNode.Text == "我是卖家")
         //if (TreeView1.SelectedNode.Text == "我是买家")
         //if (TreeView1.SelectedNode.Text == "我是委托人")
         //if (TreeView1.SelectedNode.Text == "我是受托人")

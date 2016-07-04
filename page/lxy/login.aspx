@@ -52,8 +52,8 @@
     <div class="user_main_box">
     <ul>
       <li class="user_main_text">用户名： </li>
-      <li class="user_main_input"><input class="TxtUserNameCssClass"; id="TxtUserName"; 
-      maxlength="20"; name="TxtUserName"> </li></ul>
+      <li class="user_main_input"><input class="TxtUserNameCssClass" id="TxtUserName" 
+      maxlength="20" name="TxtUserName" type="text"/> </li></ul>
     <ul>
       <li class="user_main_text">密 码： </li>
       <li class="user_main_input"><input class="TxtPasswordCssClass" id="TxtPassword" 
@@ -65,9 +65,9 @@
       点此注册>>></a></span>
       
       </li></ul></div></li>
-    <li class="user_main_r"><input class="IbtnEnterCssClass" id="IbtnEnter" 
+    <li class="user_main_r"><asp:ImageButton runat="server" class="IbtnEnterCssClass" id="IbtnEnter" 
     style="border-top-width: 0px; border-left-width: 0px; border-bottom-width: 0px; border-right-width: 0px" 
-    type="image" src="../../../image/Login/Images/user_botton.gif" name="IbtnEnter" onclick="IbtnEnter_onclick"/> </li></ul></dd>
+    type="image" src="../../../image/Login/Images/user_botton.gif" name="IbtnEnter" onclick="IbtnEnter_Onclick"/> </li></ul></dd>
   <dd id="user_bottom">
   <ul>
     <li class="user_bottom_l"></li>
@@ -76,4 +76,5 @@
 
 <div></div>
 
-</form></body></html>
+</form>
+</body></html>
