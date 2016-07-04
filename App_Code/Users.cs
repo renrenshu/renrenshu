@@ -26,12 +26,15 @@ public class Users
             }
     }
 
-    public DataSet query(string sql)
+    public DataSet query()
     {
         open();
+        string sql = "SELECT * FROM UserInformation";
+        SqlCommand selectCmd = new SqlCommand(sql, conn);//从数据库中查询
+        SqlDataAdapter da = new SqlDataAdapter();
+        da.SelectCommand = selectCmd;
         DataSet ds = new DataSet();//DataSet是表的集合
-        SqlDataAdapter da = new SqlDataAdapter(sql, conn);//从数据库中查询
-        da.Fill(ds);//将数据填充到DataSet
+        da.Fill(ds, "UserInformation");//将数据填充到DataSet
         close();//关闭连接
         return ds;//返回结果
     }
