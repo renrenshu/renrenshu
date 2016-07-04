@@ -7,9 +7,9 @@
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
     <title></title>
 </head>
-<body style="width: 297px; height: 405px">
+<body>
     <form id="form1" runat="server">
-    <div style="width: 283px; height: 420px;">
+    <div style="width:100%; height: 70%;">
     
     &nbsp;&nbsp;&nbsp;
         <asp:Label ID="Label1" runat="server" Text="推荐悬赏"></asp:Label>

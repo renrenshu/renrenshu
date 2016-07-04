@@ -12,9 +12,9 @@
         }
     </style>
 </head>
-<body style="height: 483px; width: 498px;">
+<body>
     <form id="form1" runat="server">
-    <div style="border-style: hidden; height: 523px; width: 491px;">
+    <div style="border-style: hidden; height: 70%; width: 100%;">
     
         &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
         <asp:Label ID="Label1" runat="server" Text="自由发言区" Height="5%" Width="19%" align="center"></asp:Label>
@@ -25,7 +25,8 @@
                     <col width="100" />
                     <col width="95" />
                     <col width="85" />
-                </colgroup>
+                </colgroup>
+
         <tr class="taskItem even">
                     
                         <td class="auto-style1"><div class="taskPrice">高等数学有谁卖的吗？急</div></td>
@@ -48,12 +49,15 @@
                         <td class="auto-style1"><div class="taskPrice">断网了</div></td>
                         <td><div class="taskEndTime">游客 000004<br />17:00 2016..6.30</div></td>
                         
-                    </tr>               <tr class="taskItem even">
+                    </tr>
+               <tr class="taskItem even">
                     
                         <td class="auto-style1"><div class="taskPrice">大师大师法师 收费的公打算打算打死的爱的撒旦阿萨德爱迪生司垫付给对方给对方给对方给对方个地方官 </div></td>
                         <td><div class="taskEndTime">游客 000005<br />17:00 2016..6.30</div></td>
                         
-                    </tr>             </table>
+                    </tr>
+
+             </table>
         <br />
         <br />
         <br />

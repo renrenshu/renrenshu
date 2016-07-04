@@ -117,7 +117,7 @@ public class Database
             return false;
     }
 
-    public bool Add(int tableName, string name, string author, string press, float price, string picturePath)
+    public bool Add(int tableName, string name, string author, string press, float price,string intro, string picturePath)
     //函数名：Add
     //功能：  添加书籍/悬赏信息到数据库中
     //输入参数： tableName: 表明（书库为1，榜单为2）;name: 书名； author： 作者； press： 出版社；price： 欲售价格；  picturePath： 图片绝对地址；
@@ -129,7 +129,7 @@ public class Database
             if (picturePath != null)
             {
                 //byte[] picByte = ImageToByte(picturePath);
-                string sql = "insert into Stack (bname, bauthor, bpress, bprice, btime, bpicture) values ( '" + name + "', '" + author + "', '" + press + "', '" + price + "', '" + time + "', '" + picturePath + "')";
+                string sql = "insert into Stack (bname, bauthor, bpress, bprice, btime,bintro, bpicture) values ( '" + name + "', '" + author + "', '" + press + "', '" + price + "', '" + time + "', '" + intro + "', '" + picturePath + "')";
                 if (update(sql))
 
                     return true;
@@ -139,7 +139,7 @@ public class Database
             }
             else
             {
-                string sql = "insert into Stacks (bname, bauthor, bpress, bprice, btime) values ( '" + name + "', '" + author + "', '" + press + "', '" + price + "', '" + time + "')";
+                string sql = "insert into Stacks (bname, bauthor, bpress, bprice, btime,bintro) values ( '" + name + "', '" + author + "', '" + press + "', '" + price + "', '" + time + "', '" +intro+ "')";
                 if (update(sql))
 
                     return true;
