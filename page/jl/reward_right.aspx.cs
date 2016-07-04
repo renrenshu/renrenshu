@@ -11,8 +11,4 @@ public partial class page_jl_reward_right : System.Web.UI.Page
     {
 
     }
-    protected void Button2_Click(object sender, EventArgs e)
-    {
-
-    }
 }

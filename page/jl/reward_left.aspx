@@ -7,27 +7,21 @@
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
     <title></title>
 </head>
-<body style="width: 297px; height: 405px">
+<body>
     <form id="form1" runat="server">
-    <div style="width: 283px; height: 420px;">
+    <div style="width: 100%; height:491px;">
     
-    &nbsp;&nbsp;&nbsp;
-        <asp:Label ID="Label1" runat="server" Text="推荐悬赏"></asp:Label>
-        <br />
-        <br />
-        <asp:Image ID="Image1" runat="server" Height="50%" ImageUrl="~/image/thumb3.gif" Width="50%" />
-        <asp:Button ID="Button1" runat="server" Text="放大" Width="15%" Height="5%" />
-        <br />
-        <asp:TextBox ID="TextBox1" runat="server" Height="30%" OnTextChanged="TextBox1_TextChanged" Width="90%">图文要求</asp:TextBox>
+        <asp:Image ID="Image1" runat="server" Height="50%" ImageUrl="~/image/1.png" Width="30%" />
+        <asp:Image ID="Image2" runat="server" Height="15%" ImageUrl="~/image/Login/Images/fangda.png" Width="10%" />
     
         <br />
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-        <asp:Button ID="Button2" runat="server" Height="5%" Text="联系书主" Width="25%" />
+        <asp:TextBox ID="TextBox1" runat="server" Height="29%" Width="90%">悬赏要求</asp:TextBox>
+        <br />
+        <br />
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+        <asp:Button ID="Button1" runat="server" Height="6%" Text="预定" Width="10%" />
     
     </div>
-        <div>
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-            </div>
     </form>
 </body>
 </html>
