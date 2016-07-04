@@ -24,4 +24,8 @@ public partial class page_lxy_test : System.Web.UI.Page
             Response.Write("<script>alert('操作失败!')</script>"); 
         }
     }
+    protected void Button1_Click(object sender, EventArgs e)
+    {
+
+    }
 }

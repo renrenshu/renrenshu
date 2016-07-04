@@ -1,0 +1,18 @@
+﻿body{
+    margin:0;
+    padding:0;
+}
+.topDiv {
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 12px;
+	color: #000000;
+	background-color: #FFFFFF;
+	border: 5px solid #747474;
+	position:absolute;
+	z-index:9999;
+	display:none;
+	width:30%;
+	height:275px;
+	margin-left:35%;
+	padding:10px;
+}

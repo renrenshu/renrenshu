@@ -41,7 +41,7 @@ public partial class page_lxy_log : System.Web.UI.Page
                 if (row["upassword"].ToString() == Request["TxtPassword"].ToString())
                 {
                     Response.Write("<script>alert('登录成功!')</script>");
-                    id = row["uname"].ToString();
+                    id = row["uid"].ToString();
                     //关闭该界面，将id传入上一界面并将其visible属性设置为ture
                 }
                 else 
