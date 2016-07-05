@@ -30,10 +30,15 @@
     text-align:center;
 }
 #xs_tab{
-    border:#6F605A;
+    width:80%;
     text-align:center;
     top:60px;
     position:relative;
+    margin-left:auto;
+    margin-right:auto;
+}
+#GridView1{
+    width:100%;
 }
 .xs_name{
     width:70%;

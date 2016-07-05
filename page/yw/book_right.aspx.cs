@@ -19,10 +19,12 @@ public partial class page_yw_book_right : System.Web.UI.Page
     public int pagecount;
     protected void Page_Load(object sender, EventArgs e)
     {
+        //得到页面传递的页码
         int pagenum = Convert.ToInt32( Request.QueryString["pagenum"]);
         getdata(pagenum);
         Page.DataBind();
     }
+    //将类序列化
     public string func()
     {
         JavaScriptSerializer serializer = new JavaScriptSerializer();
