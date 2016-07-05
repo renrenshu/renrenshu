@@ -14,9 +14,9 @@ public partial class page_yw_book_right : System.Web.UI.Page
     string sql = "select bno, bname, bprice, bpicture from Stack";
     DataSet ds;
     public bookinfor[] bk = new bookinfor[6];
-    //page：当前页码； pagecount:总页数
+    //pagecurrent：当前页码； pagecount:总页数
     public int pagecurrent = 1;
-    public int pagecount = 6;
+    public int pagecount;
     protected void Page_Load(object sender, EventArgs e)
     {
         int pagenum = Convert.ToInt32( Request.QueryString["pagenum"]);
