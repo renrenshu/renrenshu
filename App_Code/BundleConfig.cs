@@ -4,7 +4,6 @@ using System.Linq;
 using System.Web;
 using System.Web.Optimization;
 using System.Web.UI;
-
 namespace renrenshu
 {
     public class BundleConfig

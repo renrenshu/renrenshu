@@ -59,6 +59,7 @@
     <script id="gooods-item" type="text/x-jquery-tmpl">
             <!-- item -->
         <div class="col-lg-4 book_div">
+
             <a href="book_left.aspx?id=${ no }" target="_left"  class="thumbnail">
                 <img class="book_img" src="${ picture }" />
             </a>

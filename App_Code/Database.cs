@@ -139,7 +139,7 @@ public class Database
             }
             else
             {
-                string sql = "insert into Stacks (bname, bauthor, bpress, bprice, btime,bintro) values ( '" + name + "', '" + author + "', '" + press + "', '" + price + "', '" + time + "', '" +intro+ "')";
+                string sql = "insert into Stack (bname, bauthor, bpress, bprice, btime,bintro) values ( '" + name + "', '" + author + "', '" + press + "', '" + price + "', '" + time + "', '" +intro+ "')";
                 if (update(sql))
 
                     return true;
@@ -152,8 +152,7 @@ public class Database
         {
             if (picturePath != null)
             {
-                byte[] picByte = ImageToByte(picturePath);
-                string sql = "insert into List (lname, lauthor, lpress, lprice, ltime, lpicture) values ( '" + name + "', '" + author + "', '" + press + "', '" + price + "', '" + time + "', '" + picByte + "')";
+                string sql = "insert into List (lname, lauthor, lpress, lprice, ltime, lpicture,loffer) values ( '" + name + "', '" + author + "', '" + press + "', '" + price + "', '" + time + "', '" + picturePath + "', '" + intro + "')";
                 if (update(sql))
 
                     return true;
@@ -163,7 +162,7 @@ public class Database
             }
             else
             {
-                string sql = "insert into List (lname, lauthor, lpress, lprice, ltime) values ( '" + name + "', '" + author + "', '" + press + "', '" + price + "', '" + time + "')";
+                string sql = "insert into List (lname, lauthor, lpress, lprice, ltime , loffer) values ( '" + name + "', '" + author + "', '" + press + "', '" + price + "', '" + time + "', '" + intro + "')";
                 if (update(sql))
 
                     return true;
@@ -176,7 +175,17 @@ public class Database
 
             return false;
     }
+    public bool addcomment(string title, string content,string name)
+    {
+        string time = DateTime.Now.ToString("yyyy/MM/dd HH:mm:ss");
+        string sql = "insert into CommentArea (title, comment,time, person) values ( '" + title + "', '" + content + "', '" + time + "', '" + name + "')";
+        if (update(sql))
 
+            return true;
+        else
+
+            return false;
+    }
     public bool Delete(int tableName, int no)
     ///函数名： Delete
     //功能：  删除书籍/悬赏信息

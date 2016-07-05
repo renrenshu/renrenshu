@@ -13,31 +13,43 @@
         <asp:Panel ID="i_left" runat="server" Width="30%" ForeColor="#6F605A" Height="100%">
             <asp:Label ID="lab1" runat="server"  ForeColor="#6F605A" Font-Size="Larger" Font-Bold="True" Font-Names="幼圆">推荐书籍：</asp:Label>
             <br />
-            <a href="book_left.aspx"><asp:Image cssclass="rec_book" runat="server" ImageUrl="~/image/thumb3.gif" /></a>
+            <a href="book_left.aspx?id=<%=bk[0].no %>"><img class="rec_book" src="<%=bk[0].picture %>"/></a>
             <asp:Panel ID="rec_div" runat="server" Width="50%">
-                <asp:Label ID="rec_lab" runat="server" Text="Label"></asp:Label>
+                <asp:Label ID="rec_lab" runat="server" ><%=bk[0].name %></asp:Label>
                 <br />
-                <asp:TextBox ID="rec_text" runat="server" TextMode="MultiLine" ReadOnly="True"></asp:TextBox>
+                <asp:Label ID="rec_text" runat="server"><%=bk[0].intro %></asp:Label>
                 <br />
-                <a id ="rec_link" href="book_left.aspx">详情>></a>
+                <a id ="rec_link" href="book_left.aspx?id=<%=bk[0].no %>">详情>></a>
             </asp:Panel>
             <br />
             <hr id="virline1" />
-            <a href="book_left.aspx"><asp:Image cssclass="rec_book1" runat="server" ImageUrl="~/image/thumb3.gif" /></a>
+            <a href="book_left.aspx?id=<%=bk[1].no %>"><img class="rec_book1" src="<%=bk[1].picture %>" /></a>
             <asp:Panel ID="rec_div1" runat="server" Width="50%">
-                <asp:Label ID="rec_lab1" runat="server" Text="Label"></asp:Label>
+                <asp:Label ID="rec_lab1" runat="server"><%=bk[1].name %></asp:Label>
                 <br />
-                <asp:TextBox ID="rec_text1" runat="server" TextMode="MultiLine" ReadOnly="True"></asp:TextBox>
+                <asp:Label ID="rec_text1" runat="server"><%=bk[1].intro %></asp:Label>
                 <br />
-                <a id ="rec_link1" href="book_left.aspx">详情>></a>
+                <a id ="rec_link1" href="book_left.aspx?id=<%=bk[1].no %>">详情>></a>
             </asp:Panel>
             <hr id="virline2" />
             <asp:Panel ID="newbook_div" runat="server">
                 <asp:Label ID="new_lab" runat="server" ForeColor="#6F605A" Font-Size="Larger" Font-Bold="True" Font-Names="幼圆">最新上架:</asp:Label>
                 <br />
-                <a href="book_left.aspx"><asp:Image ID="newbook1" CssClass="newbook" runat="server" ImageUrl="~/image/thumb3.gif" /></a>
-                <a href="book_left.aspx"><asp:Image ID="newbook2" CssClass="newbook" runat="server" ImageUrl="~/image/thumb3.gif"/></a>
-                <a href="book_left.aspx"><asp:Image ID="newbook3" CssClass="newbook" runat="server" ImageUrl="~/image/thumb3.gif" /></a>
+                <asp:Panel ID="newbook1" CssClass="newbook_div" runat="server">
+                    <a href="book_left.aspx?id=<%=bk1[0].no %>"><img id="img1" class="newbook" src="<%=bk1[0].picture %>" /></a>
+                    <br />
+                    <asp:Label ID="Label1" runat="server" ><%=bk1[0].name %></asp:Label>
+                </asp:Panel>
+                <asp:Panel ID="newbook2" CssClass="newbook_div" runat="server">
+                    <a href="book_left.aspx?id=<%=bk1[1].no %>"><img id="Image1" class="newbook" src="<%=bk1[1].picture %>" /></a>
+                    <br />
+                    <asp:Label ID="Label2" runat="server"><%=bk1[1].name %></asp:Label>
+                </asp:Panel>
+                <asp:Panel ID="newbook3" CssClass="newbook_div" runat="server">
+                    <a href="book_left.aspx?id=<%=bk1[2].no %>"><img id="Image2" class="newbook" src="<%=bk1[2].picture %>" /></a>
+                    <br />
+                    <asp:Label ID="Label3" runat="server"><%=bk1[2].name %></asp:Label>
+                </asp:Panel>
             </asp:Panel>
         </asp:Panel>
     </form>

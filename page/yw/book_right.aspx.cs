@@ -14,15 +14,17 @@ public partial class page_yw_book_right : System.Web.UI.Page
     string sql = "select bno, bname, bprice, bpicture from Stack";
     DataSet ds;
     public bookinfor[] bk = new bookinfor[6];
-    //page：当前页码； pagecount:总页数
+    //pagecurrent：当前页码； pagecount:总页数
     public int pagecurrent = 1;
     public int pagecount = 6;
     protected void Page_Load(object sender, EventArgs e)
     {
+        //得到页面传递的页码
         int pagenum = Convert.ToInt32( Request.QueryString["pagenum"]);
         getdata(pagenum);
         Page.DataBind();
     }
+    //将类序列化
     public string func()
     {
         JavaScriptSerializer serializer = new JavaScriptSerializer();
