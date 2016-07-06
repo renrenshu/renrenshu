@@ -83,9 +83,9 @@ public class Database
         {//判断数据库的连接状态，如果状态是打开的话就将它关闭
             conn.Close();  
         }
-    } 
-	
-    public bool Modify(int tableName, int no, string name, string author, string press, float price)
+    }
+
+    public bool Modify(int tableName, int no, string name, string author, string press, float price, string introduction, string picture)
     //函数名：ModifyS
     //功能：  修改书籍/悬赏信息到数据库中
     //输入参数： tableName: 表明（书库为1，榜单为2）;no:该数据no; name: 书名； author： 作者； press： 出版社；price： 欲售价格/悬赏金额；
@@ -94,7 +94,7 @@ public class Database
         string time = DateTime.Now.ToString("yyyy/MM/dd HH:mm:ss");
         if(tableName == 1)
         {
-            string sql = "update Stacks set bname = '" + name + "', bauthor = '" + author + "', bpress = '" + press + "', bprice = '" + price + "', btime = '" + time + "', where bno = '" + no +"'";
+            string sql = "update Stack set bname = '" + name + "', bauthor = '" + author + "', bpress = '" + press + "', bprice = '" + price + "', btime = '" + time + "', bintro = '" + introduction + "', bpicture = '" + picture + "' where bno = '" + no + "'";
             if (update(sql))
 
                 return true;
@@ -104,7 +104,7 @@ public class Database
         }
         if (tableName == 2)
         {
-            string sql = "update List set lname = '" + name + "', lauthor = '" + author + "', lpress = '" + press + "', loffer = '" + price + "', ltime = '" + time + "', where lno = '" + no + "'"; 
+            string sql = "update List set lname = '" + name + "', lauthor = '" + author + "', lpress = '" + press + "', loffer = '" + price + "', ltime = '" + time + "', lintro = '" + introduction + "', lpicture = '" + picture + "' where lno = '" + no + "'"; 
             if (update(sql))
 
                 return true;
@@ -132,7 +132,7 @@ public class Database
             return false;
     }
 
-    public bool Add(int tableName, string name, string author, string press, float price,string intro, string picturePath)
+    public bool Add(int tableName, string name, string author, string press, float price, string intro, string picturePath)
     //函数名：Add
     //功能：  添加书籍/悬赏信息到数据库中
     //输入参数： tableName: 表明（书库为1，榜单为2）;name: 书名； author： 作者； press： 出版社；price： 欲售价格；  picturePath： 图片绝对地址；
@@ -143,8 +143,7 @@ public class Database
         {
             if (picturePath != null)
             {
-                //byte[] picByte = ImageToByte(picturePath);
-                string sql = "insert into Stack (bname, bauthor, bpress, bprice, btime,bintro, bpicture) values ( '" + name + "', '" + author + "', '" + press + "', '" + price + "', '" + time + "', '" + intro + "', '" + picturePath + "')";
+                string sql = "insert into Stack (bname, bauthor, bpress, bprice, btime, bintro, bpicture) values ( '" + name + "', '" + author + "', '" + press + "', '" + price + "', '" + time + "', '" + intro + "', '" + picturePath + "')";
                 if (update(sql))
 
                     return true;
@@ -154,7 +153,7 @@ public class Database
             }
             else
             {
-                string sql = "insert into Stack (bname, bauthor, bpress, bprice, btime,bintro) values ( '" + name + "', '" + author + "', '" + press + "', '" + price + "', '" + time + "', '" +intro+ "')";
+                string sql = "insert into Stack (bname, bauthor, bpress, bprice, btime, bintro) values ( '" + name + "', '" + author + "', '" + press + "', '" + price + "', '" + time + "', '" +intro+ "')";
                 if (update(sql))
 
                     return true;
@@ -167,7 +166,7 @@ public class Database
         {
             if (picturePath != null)
             {
-                string sql = "insert into List (lname, lauthor, lpress, lprice, ltime, lpicture,loffer) values ( '" + name + "', '" + author + "', '" + press + "', '" + price + "', '" + time + "', '" + picturePath + "', '" + intro + "')";
+                string sql = "insert into List (lname, lauthor, lpress, loffer, ltime, lintro, lpicture) values ( '" + name + "', '" + author + "', '" + press + "', '" + price + "', '" + time + "', '" + picturePath + "', '" + intro + "')";
                 if (update(sql))
 
                     return true;
@@ -177,7 +176,7 @@ public class Database
             }
             else
             {
-                string sql = "insert into List (lname, lauthor, lpress, lprice, ltime , loffer) values ( '" + name + "', '" + author + "', '" + press + "', '" + price + "', '" + time + "', '" + intro + "')";
+                string sql = "insert into List (lname, lauthor, lpress, loffer, ltime , lintro) values ( '" + name + "', '" + author + "', '" + press + "', '" + price + "', '" + time + "', '" + intro + "')";
                 if (update(sql))
 
                     return true;
@@ -201,9 +200,9 @@ public class Database
 
             return false;
     }
-    public bool DeleteRelationship(int tableName, int no, int user)
+    public bool DeleteRelationship(int tableName, int user, int no)
     ///函数名： DeleteRelationship
-    //功能：  删除预定/揭榜信息
+    //功能：  删除预定/揭榜信息（买）
     //输入参数：tableName: 表明（预定表为1，揭榜表为2）;no: 编号。
     //返回值： 删除成功返回true,否则为false
     {
@@ -231,15 +230,45 @@ public class Database
 
             return false;
     }
-    public bool Delete(int tableName, int no)
-    ///函数名： Delete
+    public bool DeleteRelationship1(int tableName, int user, int no)
+    ///函数名： DeleteRelationship
+    //功能：  删除预定/揭榜信息(卖)
+    //输入参数：tableName: 表明（预定表为1，揭榜表为2）;no: 编号。
+    //返回值： 删除成功返回true,否则为false
+    {
+        if (tableName == 1)
+        {
+            string sql = "delete from OrderRelationship where bno = '" + no + "' AND seller = '" + user + "'";
+            if (update(sql))
+
+                return true;
+            else
+
+                return false;
+        }
+        if (tableName == 2)
+        {
+            string sql = "delete from RewardRelationship where lno = '" + no + "' AND client = '" + user + "'";
+            if (update(sql))
+
+                return true;
+            else
+
+                return false;
+        }
+        else
+
+            return false;
+    }
+    public bool DeleteInformation(int tableName, int no)
+    ///函数名： DeleteInformation
     //功能：  删除书籍/悬赏信息
     //输入参数：tableName: 表明（书库为1，榜单为2）;no: 编号。
     //返回值： 删除成功返回true,否则为false
     {
         if (tableName == 1)
         {
-            string sql = "delete from Stacks where bno = '"+ no +"'";
+            string sql = "delete from Stack where bno = '"+ no +"'";
             if (update(sql))
 
                 return true;
@@ -249,7 +278,7 @@ public class Database
         }
         if (tableName == 2)
         {
-            string sql = "delete from List where bno = '" + no + "'";
+            string sql = "delete from List where lno = '" + no + "'";
             if (update(sql))
 
                 return true;
@@ -261,16 +290,15 @@ public class Database
 
             return false;
     }
-
-    public bool Cancel(int tableName, int no)
-    ///函数名： Cancel
-    //功能：  取消预定/揭榜
-    //输入参数：tableName: 表明（书库为1，榜单为2）;no: 编号。
-    //返回值： 取消成功返回true,否则为false
+    public bool Delete_U(int tableName, int user, int no)
+    ///函数名： DeleteU_
+    //功能：  删除人书/悬赏链接信息
+    //输入参数：tableName: 表明（U_S为1，U_L为2）;user: 用户id;no: 编号。
+    //返回值： 删除成功返回true,否则为false
     {
         if (tableName == 1)
         {
-            string sql = "delete from OrderRelationship where ono = '" + no + "'";
+            string sql = "delete from U_S where uid = '"+ user +"' AND bno = '" + no + "'";
             if (update(sql))
 
                 return true;
@@ -280,7 +308,7 @@ public class Database
         }
         if (tableName == 2)
         {
-            string sql = "delete from RewardRelationship where rno = '" + no + "'";
+            string sql = "delete from U_L where uid = '" + user + "' AND lno = '" + no + "'";
             if (update(sql))
 
                 return true;
@@ -292,42 +320,4 @@ public class Database
 
             return false;
     }
-
-    public byte[] ImageToByte(string picturePath)
-    ///函数名： ImageSave
-    //功能： 将图片转化为二进制
-    //输入参数：picturePath: 图片绝对地址。
-    //返回值： 保存成功返回图片二进制数组,否则为空
-    {
-        try
-        {
-            //创建FileStream对象
-            FileStream pic = new FileStream(picturePath, FileMode.Open);//picturePath是图片路径 
-            //声明Byte数组
-            byte[] picByte = new byte[pic.Length];
-            //转换成二进制数据
-            pic.Read(picByte, 0, picByte.Length);
-
-            return picByte;
-        }
-        catch (Exception)
-        {
-
-            return null;
-        }
-    }
-
-    public Image ByteToImage(byte[] picByte)
-    //函数名： ByteToImage
-    //功能：  图片从二进制转化为图片
-    //输入参数：picByte: 图片二进制数组。
-    //返回值： 读取成功返回图片,否则为null
-    {
-        if (picByte.Length == 0)
-            return null;
-        System.IO.MemoryStream ms = new System.IO.MemoryStream(picByte);
-        System.Drawing.Image image = System.Drawing.Image.FromStream(ms);
-        return image;
-    }
-
 }
