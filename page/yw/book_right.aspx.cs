@@ -16,7 +16,7 @@ public partial class page_yw_book_right : System.Web.UI.Page
     public bookinfor[] bk = new bookinfor[6];
     //pagecurrent：当前页码； pagecount:总页数
     public int pagecurrent = 1;
-    public int pagecount = 6;
+    public int pagecount;
     protected void Page_Load(object sender, EventArgs e)
     {
         //得到页面传递的页码

@@ -1,0 +1,28 @@
+﻿body {
+    overflow-x: hidden;
+}
+.book_div{
+    float:left;
+    width:35%;
+    height:40%;
+    left:10%;
+}
+.book_img{
+    width:80%;
+    height:45%;
+}
+.items-body {
+    margin-top: 60px;
+}
+.check{
+    top:0px;
+    right:0px;
+}
+.jiage{
+    float:right;
+    margin-right:0px;
+}
+.ordertable{
+    float:right;
+    margin-right:0px;
+}
