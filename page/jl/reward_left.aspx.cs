@@ -42,8 +42,11 @@ public partial class page_jl_Default : System.Web.UI.Page
         if (Session["id"] != null)
         {
             string uid = Session["id"].ToString().Trim();
-            string sql1 = "insert into u_l (uid, lno) values ('" + uid + "','" + rd.no + "')";
-            bool check = data.update(sql1);
+            string sql1 = "select * from U_L where lno=" + rd.no;
+            DataSet ds1 = data.query(sql1);
+            string client = ds1.Tables["base"].Rows[0]["uid"].ToString().Trim();
+            string sql2 = "insert into RewardRelationship (client,mandatory,lno) values ('" +client+"','"+ uid + "','" + rd.no + "')";
+            bool check = data.update(sql2);
             if (check == true)
             {
                 Response.Write("<script>alert('揭榜成功！详情请到个人中心查看')</script>");
