@@ -28,7 +28,7 @@
         <div class="container book">
             <asp:Panel ID="find" runat="server">
                 <asp:TextBox ID="book_find" runat="server"></asp:TextBox>
-                <asp:Button ID="btn_find" runat="server" Text="搜索" />
+                <asp:Button ID="btn_find" runat="server" Text="搜索" OnClick="btn_find_Click" />
             </asp:Panel>
             
             <div class="row items-body" id="items-container">
@@ -73,7 +73,7 @@
         <!-- end item -->
     </script> 
     <script>
-        $(function () {
+        $(function filldata() {
             var a = <%=func()%>
             var container = $("#items-container");
 

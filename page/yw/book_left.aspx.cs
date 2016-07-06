@@ -43,4 +43,26 @@ public partial class page_yw_book_left : System.Web.UI.Page
         bk.price = ds.Tables["base"].Rows[0]["bprice"].ToString();
         bk.picture = ds.Tables["base"].Rows[0]["bpicture"].ToString();
     }
+    protected void book_order_Click(object sender, EventArgs e)
+    {
+        if(Session["id"] != null)
+        {
+            string uid = Session["id"].ToString().Trim();
+            string sql1 = "insert into u_s (uid, bno) values ('" + uid + "','" + bk.no + "')";
+            bool check =data.update(sql1);
+            if (check == true)
+            {
+                Response.Write("<script>alert('预订成功！')</script>");
+            }
+            else
+            {
+                Response.Write("<script>alert('预订失败！')</script>");
+            }
+        }
+        else
+        {
+            Page.ClientScript.RegisterStartupScript(this.GetType(), "",
+                "<script>alert('还未登录，请先登录！')</script>");
+        }
+    }
 }

@@ -35,14 +35,16 @@ public partial class page_lxy_log : System.Web.UI.Page
         ds = people.query();
         foreach (DataRow row in ds.Tables["UserInformation"].Rows)
         {
-            if (row["uname"].ToString() == Request["TxtUserName"].ToString())
+            if (row["uname"].ToString().Trim() == Request["TxtUserName"].ToString().Trim())
             {
                 stuta = true;
-                if (row["upassword"].ToString() == Request["TxtPassword"].ToString())
+                if (row["upassword"].ToString().Trim() == Request["TxtPassword"].ToString().Trim())
                 {
                     Response.Write("<script>alert('登录成功!')</script>");
                     id = row["uid"].ToString();
                     //关闭该界面，将id传入上一界面并将其visible属性设置为ture
+                    Session["id"] = id;
+                    Response.Redirect("../yw/index.aspx");
                 }
                 else 
                 {
