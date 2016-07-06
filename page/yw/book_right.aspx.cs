@@ -23,7 +23,7 @@ public partial class page_yw_book_right : System.Web.UI.Page
     {
         if(Request.QueryString["sql"] != null)
         {
-            sql = "select * from Stack where bname like '% " + Request.QueryString["sql"].ToString().Trim() + "%'";
+            sql = "select * from Stack where bname like '%" + Request.QueryString["sql"].ToString().Trim() + "%'";
         }
         getds();
         //得到页面传递的页码
@@ -59,6 +59,10 @@ public partial class page_yw_book_right : System.Web.UI.Page
         else
         {
             pagecount = ds.Tables["base"].Rows.Count / 6;
+        }
+        if(pagecount == 0)
+        {
+            pagecount = 1;
         }
         //将页面传递的页码赋给pagecurrent
         if(pagenum > 0 && pagenum <= pagecount)

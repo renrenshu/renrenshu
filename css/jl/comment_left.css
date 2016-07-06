@@ -21,7 +21,9 @@
 }
 #lab_content{
     border:groove;
-    width:73%;
+    width:85%;
+    display:-moz-inline-box;
+    display:inline-block;
 }
 #div_ending{
     float:right;

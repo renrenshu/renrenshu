@@ -46,7 +46,7 @@ public partial class page_jl_Default : System.Web.UI.Page
             bool check = data.update(sql1);
             if (check == true)
             {
-                Response.Write("<script>alert('揭榜成功！')</script>");
+                Response.Write("<script>alert('揭榜成功！详情请到个人中心查看')</script>");
             }
             else
             {

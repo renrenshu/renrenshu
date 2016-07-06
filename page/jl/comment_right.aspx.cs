@@ -135,31 +135,47 @@ public partial class page_jl_comment_right : System.Web.UI.Page
     }
     protected void btn_submit_Click(object sender, EventArgs e)
     {
-        if(txt_title.Text == null || txt_content.Text == null)
+        if (Session["id"] != null)
         {
-            if(txt_title.Text == null)
+            string uid = Session["id"].ToString();
+            string sql2 = "select uname from UserInformation where uid = '";
+            sql2 = sql2 + uid + "'";
+            string name;
+            DataSet ds1;
+            ds1 = data.query(sql2);
+            name = ds1.Tables["base"].Rows[0]["uname"].ToString();
+            if (txt_title.Text == null || txt_content.Text == null)
             {
-                Page.ClientScript.RegisterStartupScript(this.GetType(), "", "<script>alert('标题不能为空！')</script>");
+                if (txt_title.Text == null)
+                {
+                    Page.ClientScript.RegisterStartupScript(this.GetType(), "", "<script>alert('标题不能为空！')</script>");
+                }
+                else
+                {
+                    Page.ClientScript.RegisterStartupScript(this.GetType(), "", "<script>alert('内容不能为空！')</script>");
+                }
             }
             else
             {
-                Page.ClientScript.RegisterStartupScript(this.GetType(), "", "<script>alert('内容不能为空！')</script>");
+                bool check = false;
+                check = data.addcomment(txt_title.Text.ToString().Trim(), txt_content.Text.ToString().Trim(), name);
+                if (check == true)
+                {
+                    Page.ClientScript.RegisterStartupScript(this.GetType(), "",
+                    "<script>alert('发表成功！');location.href='comment_right.aspx'</script>");
+                }
+                else
+                {
+                    Page.ClientScript.RegisterStartupScript(this.GetType(), "",
+                    "<script>alert('发表失败！');location.href='comment_right.aspx'</script>");
+                }
             }
         }
         else
         {
-            bool check = false;
-            check = data.addcomment(txt_title.Text.ToString().Trim(), txt_content.Text.ToString().Trim(), "天黑");
-            if (check == true)
-            {
-                Page.ClientScript.RegisterStartupScript(this.GetType(), "",
-                "<script>alert('发表成功！');location.href='comment_right.aspx'</script>");
-            }
-            else
-            {
-                Page.ClientScript.RegisterStartupScript(this.GetType(), "",
-                "<script>alert('发表失败！');location.href='comment_right.aspx'</script>");
-            }
+            Page.ClientScript.RegisterStartupScript(this.GetType(), "",
+                "<script>alert('还未登录，请先登录！')</script>");
         }
+       
     }
 }

@@ -1,6 +1,7 @@
 ﻿body {
     border:none;
     overflow-x: hidden;
+    overflow-y:hidden;
 }
 #i_left{
     border:none;

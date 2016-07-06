@@ -23,6 +23,11 @@ public partial class page_jl_comment_left : System.Web.UI.Page
             sql = sql + id;
             getdata();
         }
+        else
+        {
+            sql = "select * from CommentArea";
+            getdata();
+        }
     }
     //获取数据(ab为页面获取的页码)
     public void getdata()

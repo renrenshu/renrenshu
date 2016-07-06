@@ -23,7 +23,7 @@
             <asp:Panel ID="div_content" runat="server">
                 <asp:Label ID="Label2" runat="server" Text="内容："></asp:Label>
                 <br />
-                <asp:Label ID="lab_content" runat="server"><%=ct.content %></asp:Label>
+                <textarea id="lab_content" readonly="readonly" cols="25" rows="10"><%=ct.content %></textarea>
             </asp:Panel>
             <asp:Panel ID="div_ending" runat="server">
                 <asp:Panel ID="div_time" runat="server">

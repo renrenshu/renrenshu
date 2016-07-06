@@ -28,7 +28,7 @@
         <div class="container book">
             <asp:Panel ID="find" runat="server">
                 <asp:TextBox ID="book_find" runat="server"></asp:TextBox>
-                <asp:Button ID="btn_find" runat="server" Text="搜索" OnClick="btn_find_Click" />
+                <asp:Button ID="btn_find" runat="server" Text="搜索" OnClick="btn_find_Click" UseSubmitBehavior="False" />
             </asp:Panel>
             
             <div class="row items-body" id="items-container">

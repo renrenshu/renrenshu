@@ -21,9 +21,6 @@
             <br />
             <div>
                 <img id="book_img" src="<%=bk.picture %>" />
-                <button type="button" id="img_expand" class="btn btn-default" aria-label="放大图片">
-                    <span class="glyphicon glyphicon-zoom-in" aria-hidden="true"></span>
-                </button>
             </div>
             <asp:Panel ID="book_details" runat="server">
                 <div>
@@ -52,8 +49,7 @@
             <asp:Panel ID="information" runat="server">
                 <asp:Label ID="book_information" runat="server" Text="简介："></asp:Label>
                 <br />
-                <%--<asp:TextBox ID="book_text" runat="server" TextMode="MultiLine" ReadOnly="True"></asp:TextBox>--%>
-                <asp:Label ID="book_text" runat="server" ><%=bk.intro %></asp:Label>
+                <textarea id="book_text" cols="25" rows="10"><%=bk.intro %></textarea>
             </asp:Panel>
         </asp:Panel>
     </form>
