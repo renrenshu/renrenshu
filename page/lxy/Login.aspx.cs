@@ -19,7 +19,7 @@ public partial class page_lxy_log : System.Web.UI.Page
         Users people = new Users();
         status = people.Add(user_name_TextBox.Text, user_phone_TextBox.Text, user_password_TextBox1.Text);
         if (status)
-            Response.Write("<script>alert('操作成功!');window.location.href ='http://localhost:2039/page/yw/index.html'</script>");
+            Response.Write("<script>alert('操作成功!');window.location.href ='login.aspx'</script>");
         else
         {
             Response.Write("<script>alert('操作失败!')</script>");
@@ -44,7 +44,10 @@ public partial class page_lxy_log : System.Web.UI.Page
                     id = row["uid"].ToString();
                     //关闭该界面，将id传入上一界面并将其visible属性设置为ture
                     Session["id"] = id;
-                    Response.Redirect("../yw/index.aspx");
+                    if(Convert.ToInt32(row["ulimit"].ToString()) == 0)
+                        Response.Redirect("../yw/index.aspx");
+                    else
+                        Response.Redirect("../yw/maintain.html");
                 }
                 else 
                 {

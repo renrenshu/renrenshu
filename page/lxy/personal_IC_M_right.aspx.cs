@@ -7,7 +7,7 @@ using System.Web.UI.WebControls;
 
 public partial class page_lxy_personal_IC_M_right : System.Web.UI.Page
 {
-    string noimg = "http://localhost:2039/image/nophoto.jpg";
+    string noimg = "http://localhost:52863/image/nophoto.jpg";
     Database ba = new Database();
     int lno;
     protected void Page_Load(object sender, EventArgs e)
@@ -53,7 +53,7 @@ public partial class page_lxy_personal_IC_M_right : System.Web.UI.Page
                 }
                 savePath = savePath + "\\" + fileup.FileName;
                 fileup.SaveAs(savePath);
-                string save = "http://localhost:2039" + "/upload/" + fileup.FileName;
+                string save = "http://localhost:52863" + "/upload/" + fileup.FileName;
                 check = ba.Modify(2, lno, txt_name.Text.Trim(), txt_author.Text.Trim(), txt_press.Text.Trim(), offer, txt_jianjie.Text.Trim(), save);
             }
             else
@@ -62,7 +62,7 @@ public partial class page_lxy_personal_IC_M_right : System.Web.UI.Page
             }
             if (check == true)
             {
-                Response.Write("<script>alert('修改成功！');window.location.href ='http://localhost:2039/page/lxy/personal_IC_right.aspx'</script>");
+                Response.Write("<script>alert('修改成功！');window.location.href ='http://localhost:52863/page/lxy/personal_IC_right.aspx'</script>");
             }
             else
             {

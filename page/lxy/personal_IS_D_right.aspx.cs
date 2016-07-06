@@ -28,7 +28,7 @@ public partial class page_lxy_personal_IS_D_right : System.Web.UI.Page
         status = people.Delete_U(1, seller, bno);
         status = people.DeleteInformation(1, bno);
         if (status)
-            Response.Write("<script>alert('删除成功!');window.location.href ='http://localhost:2039/page/lxy/personal_IS_right.aspx'</script>");
+            Response.Write("<script>alert('删除成功!');window.location.href ='personal_IS_right.aspx'</script>");
         else
         {
             Response.Write("<script>alert('删除失败!')</script>");

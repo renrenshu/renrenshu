@@ -27,7 +27,7 @@ public partial class page_lxy_personal_IS_D_right : System.Web.UI.Page
         Database people = new Database();
         status = people.DeleteRelationship(1, bno, buyer);
         if (status)
-            Response.Write("<script>alert('删除成功!');window.location.href ='http://localhost:2039/page/lxy/personal_IB_right.aspx'</script>");
+            Response.Write("<script>alert('删除成功!');window.location.href ='personal_IB_right.aspx'</script>");
         else
         {
             Response.Write("<script>alert('删除失败!')</script>");

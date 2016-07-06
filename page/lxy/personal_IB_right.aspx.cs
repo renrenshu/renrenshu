@@ -9,7 +9,7 @@ using System.Web.UI.WebControls;
 
 public partial class page_lxy_personal_IB_right : System.Web.UI.Page
 {
-    int id = 6;
+    int id;
     //public bookinfor[] bk = new bookinfor[4];
     public bookbuy[] bb = new bookbuy[4];
     //pagecurrent：当前页码； pagecount:总页数
@@ -18,6 +18,10 @@ public partial class page_lxy_personal_IB_right : System.Web.UI.Page
     int pagenum;
     protected void Page_Load(object sender, EventArgs e)
     {
+        if (Session["id"] != null)
+        {
+            id = Convert.ToInt32(Session["id"].ToString());
+        }
         pagenum = Convert.ToInt32(Request.QueryString["pagenum"]);
         getdata(pagenum);
         Page.DataBind();
