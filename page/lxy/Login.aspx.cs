@@ -17,13 +17,23 @@ public partial class page_lxy_log : System.Web.UI.Page
     {
         bool status = false;
         Users people = new Users();
-        status = people.Add(user_name_TextBox.Text, user_phone_TextBox.Text, user_password_TextBox1.Text);
-        if (status)
-            Response.Write("<script>alert('操作成功!');window.location.href ='login.aspx'</script>");
+        if(user_password_TextBox1.Text == user_password_TextBox2.Text)
+        {
+            status = people.Add(user_name_TextBox.Text, user_phone_TextBox.Text, user_password_TextBox1.Text);
+            if (status)
+                Response.Write("<script>alert('操作成功!');window.location.href ='login.aspx'</script>");
+            else
+            {
+                Response.Write("<script>alert('操作失败!')</script>");
+            } 
+        }
         else
         {
-            Response.Write("<script>alert('操作失败!')</script>");
+            Response.Write("<script>alert('两次密码输入不一致，请重新输入!')</script>");
+            user_password_TextBox1.Text = null;
+            user_password_TextBox2.Text = null;
         }
+        
     }
 
     protected void IbtnEnter_Onclick(object sender, ImageClickEventArgs e)
