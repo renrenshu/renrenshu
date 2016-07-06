@@ -30,7 +30,7 @@ public partial class page_lxy_personal_MI_right : System.Web.UI.Page
         Users people = new Users();
         status = people.Modify(user_name_TextBox.Text, user_phone_TextBox.Text, user_password_TextBox1.Text);
         if (status)
-            Response.Write("<script>alert('操作成功!');window.location.href ='http://localhost:2039/page/lxy/personal.aspx'</script>");
+            Response.Write("<script>alert('操作成功!');window.location.href ='personal.aspx'</script>");
         else
         {
             Response.Write("<script>alert('操作失败!')</script>");
