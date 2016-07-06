@@ -42,7 +42,7 @@
             <asp:Panel ID="information" runat="server">
                 <asp:Label ID="book_information" runat="server" Text="简介："></asp:Label>
                 <br />
-                <textarea id="book_text" cols="25" rows="10"><%=rd.offer %></textarea>
+                <textarea id="book_text" cols="25" rows="10"><%=rd.intro %></textarea>
             </asp:Panel>
         </asp:Panel>
     </form>

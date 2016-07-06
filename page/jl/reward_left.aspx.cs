@@ -33,8 +33,8 @@ public partial class page_jl_Default : System.Web.UI.Page
         rd.name = ds.Tables["base"].Rows[0]["lname"].ToString();
         rd.author = ds.Tables["base"].Rows[0]["lauthor"].ToString();
         rd.press = ds.Tables["base"].Rows[0]["lpress"].ToString();
-        rd.offer = ds.Tables["base"].Rows[0]["loffer"].ToString();
-        rd.price = ds.Tables["base"].Rows[0]["lprice"].ToString();
+        rd.price = ds.Tables["base"].Rows[0]["loffer"].ToString();
+        rd.intro = ds.Tables["base"].Rows[0]["lintro"].ToString();
         rd.picture = ds.Tables["base"].Rows[0]["lpicture"].ToString();
     }
     protected void book_order_Click(object sender, EventArgs e)

@@ -11,7 +11,7 @@ using System.Web.Script.Serialization;
 public partial class page_jl_reward_right : System.Web.UI.Page
 {
     Database data = new Database();
-    string sql = "select lno, lname, lprice, lpicture from List";
+    string sql = "select lno, lname, loffer, lpicture from List";
     DataSet ds;
     public rewardinfor[] rd = new rewardinfor[10];
     //pagecurrent：当前页码； pagecount:总页数
@@ -62,7 +62,7 @@ public partial class page_jl_reward_right : System.Web.UI.Page
             rd[num] = new rewardinfor();
             rd[num].no = ds.Tables["base"].Rows[i]["lno"].ToString();
             rd[num].name = ds.Tables["base"].Rows[i]["lname"].ToString();
-            rd[num].price = ds.Tables["base"].Rows[i]["lprice"].ToString();
+            rd[num].price = ds.Tables["base"].Rows[i]["loffer"].ToString();
             rd[num].picture = ds.Tables["base"].Rows[i]["lpicture"].ToString();
             num++;
 

@@ -77,9 +77,9 @@
                         <asp:GridView ID="GridView1" runat="server" DataSourceID="SqlDataSource1" AutoGenerateColumns="False" BackColor="LightGoldenrodYellow" BorderColor="Tan" BorderWidth="1px" CellPadding="2" ForeColor="Black" GridLines="None">
                             <AlternatingRowStyle BackColor="PaleGoldenrod" />
                             <Columns>
-                                <asp:BoundField DataField="lname" HeaderText="悬赏书籍" SortExpression="lname">
+                                <asp:BoundField DataField="lname" HeaderText="lname" SortExpression="lname">
                                 </asp:BoundField>
-                                <asp:BoundField DataField="lprice" HeaderText="悬赏金额（元）" SortExpression="lprice">
+                                <asp:BoundField DataField="loffer" HeaderText="loffer" SortExpression="loffer">
                                 </asp:BoundField>
                             </Columns>
                             <FooterStyle BackColor="Tan" />
@@ -93,7 +93,7 @@
                         </asp:GridView>
                     </asp:Panel>
                 </asp:Panel>
-                <asp:SqlDataSource ID="SqlDataSource1" runat="server" ConnectionString="<%$ ConnectionStrings:人人书ConnectionString2 %>" SelectCommand="SELECT TOP (10) lname, lprice FROM List ORDER BY lprice DESC, ltime DESC"></asp:SqlDataSource>
+                <asp:SqlDataSource ID="SqlDataSource1" runat="server" ConnectionString="<%$ ConnectionStrings:人人书ConnectionString2 %>" SelectCommand="SELECT TOP (10) lname, loffer FROM List ORDER BY loffer DESC, ltime DESC"></asp:SqlDataSource>
             </asp:Panel>
         </asp:Panel>
     </form>

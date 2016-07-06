@@ -60,12 +60,10 @@ public partial class page_yw_AddBook : System.Web.UI.Page
                     string save = "http://localhost:52863" + "/upload/" + fileup.FileName;
                     check = ba.Add(1, txt_name.Text.Trim(), txt_author.Text.Trim(), txt_press.Text.Trim(),
                         price, txt_jianjie.Text.Trim(),save);
-                    string sql = "select bno from Stack where bname = '" + txt_name.Text.Trim() + "',' bauthor='" +
-                        txt_author.Text.Trim() + "',' bpress='" + txt_press.Text.Trim() + "',' bprice='" + price +
-                        "',' bintro ='" + txt_jianjie.Text.Trim() + "',' bpicture='" + save +"'";
+                    string sql = "select max(bno) from Stack";
                     DataSet ds = ba.query(sql);
                     string bno = ds.Tables["base"].Rows[0]["bno"].ToString().Trim();
-                    string sql1 = "insert into U_S (uid, bno) values('"+ Session["id"].ToString().Trim() + "','" +bno +"'";
+                    string sql1 = "insert into U_S (uid, bno) values('"+ Session["id"].ToString().Trim() + "','" +bno +"')";
                     check1 = ba.update(sql1);
 
                 }
@@ -73,12 +71,10 @@ public partial class page_yw_AddBook : System.Web.UI.Page
                 {
                     check = ba.Add(1, txt_name.Text.Trim(), txt_author.Text.Trim(), txt_press.Text.Trim(),
                         price,txt_jianjie.Text.Trim(), noimg);
-                    string sql = "select bno from Stack where bname = '" + txt_name.Text.Trim() + "',' bauthor='" +
-                        txt_author.Text.Trim() + "',' bpress='" + txt_press.Text.Trim() + "',' bprice='" + price +
-                        "',' bintro ='" + txt_jianjie.Text.Trim() + "',' bpicture='" + noimg + "'";
+                    string sql = "select max(bno) from Stack";
                     DataSet ds = ba.query(sql);
-                    string bno = ds.Tables["base"].Rows[0]["bno"].ToString().Trim();
-                    string sql1 = "insert into U_S (uid, bno) values('" + Session["id"].ToString().Trim() + "','" + bno + "'";
+                    string bno = ds.Tables["base"].Rows[0][0].ToString().Trim();
+                    string sql1 = "insert into U_S (uid, bno) values('" + Session["id"].ToString().Trim() + "','" + bno + "')";
                     check1 = ba.update(sql1);
                 }
                 if(check==true && check1 == true)
@@ -90,6 +86,11 @@ public partial class page_yw_AddBook : System.Web.UI.Page
                     Response.Write("<script>alert('添加失败！')</script>");
                 }
             }
+        }
+        else
+        {
+            Page.ClientScript.RegisterStartupScript(this.GetType(), "",
+                "<script>alert('还未登录，请先登录！')</script>");
         }
         
     }

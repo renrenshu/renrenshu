@@ -19,7 +19,7 @@ public class rewardinfor
     public string author;
     public string press;
     public string price;
-    public string offer;
+    public string intro;
     public DateTime time;
     public string picture;
 }

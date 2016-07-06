@@ -57,24 +57,20 @@ public partial class page_jl_addreward : System.Web.UI.Page
                     string save = "http://localhost:52863" + "/upload/" + fileup.FileName;
                     check = ba.Add(2, txt_name.Text.Trim(), txt_author.Text.Trim(), txt_press.Text.Trim(),
                         price, txt_jianjie.Text.Trim(), save);
-                    string sql = "select bno from List where lname = '" + txt_name.Text.Trim() + "',' lauthor='" +
-                        txt_author.Text.Trim() + "',' lpress='" + txt_press.Text.Trim() + "',' lprice='" + price +
-                        "',' lintro ='" + txt_jianjie.Text.Trim() + "',' lpicture='" + save + "'";
+                    string sql = "select max(lno) from List";
                     DataSet ds = ba.query(sql);
-                    string lno = ds.Tables["base"].Rows[0]["lno"].ToString().Trim();
-                    string sql1 = "insert into U_L (uid, lno) values('" + Session["id"].ToString().Trim() + "','" + lno + "'";
+                    string lno = ds.Tables["base"].Rows[0][0].ToString().Trim();
+                    string sql1 = "insert into U_L (uid, lno) values('" + Session["id"].ToString().Trim() + "','" + lno + "')";
                     check1 = ba.update(sql1);
                 }
                 else
                 {
                     check = ba.Add(2, txt_name.Text.Trim(), txt_author.Text.Trim(), txt_press.Text.Trim(),
                         price, txt_jianjie.Text.Trim(), noimg);
-                    string sql = "select bno from List where lname = '" + txt_name.Text.Trim() + "',' lauthor='" +
-                        txt_author.Text.Trim() + "',' lpress='" + txt_press.Text.Trim() + "',' lprice='" + price +
-                        "',' lintro ='" + txt_jianjie.Text.Trim() + "',' lpicture='" + noimg + "'";
+                    string sql = "select max(lno) from List";
                     DataSet ds = ba.query(sql);
                     string lno = ds.Tables["base"].Rows[0]["lno"].ToString().Trim();
-                    string sql1 = "insert into U_L (uid, lno) values('" + Session["id"].ToString().Trim() + "','" + lno + "'";
+                    string sql1 = "insert into U_L (uid, lno) values('" + Session["id"].ToString().Trim() + "','" + lno + "')";
                     check1 = ba.update(sql1);
                 }
                 if (check == true)
@@ -86,6 +82,11 @@ public partial class page_jl_addreward : System.Web.UI.Page
                     Response.Write("<script>alert('发布失败！')</script>");
                 }
             }
+        }
+        else
+        {
+            Page.ClientScript.RegisterStartupScript(this.GetType(), "",
+                "<script>alert('还未登录，请先登录！')</script>");
         }
         
     }
