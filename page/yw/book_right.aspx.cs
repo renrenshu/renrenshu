@@ -18,11 +18,12 @@ public partial class page_yw_book_right : System.Web.UI.Page
     public int pagecurrent = 1;
     public int pagecount;
     int pagenum = 1;
+    string findstr = null;
     protected void Page_Load(object sender, EventArgs e)
     {
         if(Request.QueryString["sql"] != null)
         {
-            sql = Request.QueryString["sql"].ToString().Trim();
+            sql = "select * from Stack where bname like '% " + Request.QueryString["sql"].ToString().Trim() + "%'";
         }
         getds();
         //得到页面传递的页码
@@ -137,20 +138,19 @@ public partial class page_yw_book_right : System.Web.UI.Page
             Response.Redirect(url_right);
         }
     }
+
     protected void btn_find_Click(object sender, EventArgs e)
     {
-        if(book_find.Text==null)
+        if (book_find.Text.ToString().Trim() == null)
         {
             Response.Write("<script>alert('请填写搜索书籍名！')</script>");
         }
         else
         {
-            string findstr = book_find.Text.ToString().Trim();
-            string sqlfind = "select * from Stack where bname like '% " + findstr + "%'";
-            string url_right = "book_right.aspx?sql=" + sqlfind;
+            findstr = book_find.Text.ToString().Trim();
+            string url_right = "book_right.aspx?sql=" + findstr;
             Response.Redirect(url_right);
-            
+
         }
-        
     }
 }
