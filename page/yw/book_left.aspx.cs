@@ -48,7 +48,10 @@ public partial class page_yw_book_left : System.Web.UI.Page
         if(Session["id"] != null)
         {
             string uid = Session["id"].ToString().Trim();
-            string sql1 = "insert into u_s (uid, bno) values ('" + uid + "','" + bk.no + "')";
+            string sql2 = "select * from U_S where bno=" + bk.no;
+            DataSet ds1 = data.query(sql2);
+            string seller = ds1.Tables["base"].Rows[0]["uid"].ToString().Trim();
+            string sql1 = "insert into OrderRelationship (seller,buyer,bno) values ('"+seller+"','" + uid + "','" + bk.no + "')";
             bool check =data.update(sql1);
             if (check == true)
             {
