@@ -78,7 +78,7 @@ public partial class page_lxy_personal_IS_right : System.Web.UI.Page
     //首页
     protected void FistPage_Click(object sender, EventArgs e)
     {
-        Response.Redirect("personal_IS_right.aspx");
+        Response.Redirect("personal_IS_right.aspx?pagenum=1");
     }
 
     //上一页

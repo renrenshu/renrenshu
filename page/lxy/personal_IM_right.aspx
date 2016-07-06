@@ -56,7 +56,7 @@
                 <asp:Label ID="Label3" runat="server" Text="时间">${ time }</asp:Label>
             </asp:Panel>
             <asp:Panel ID="Panel4" runat="server">
-                <a <%--href="personal_IS_M_right.aspx?seller=${ seller },buyer=${ bno }" target="_right"--%>  class="check">修改</a>
+                <a href="personal_IM_D_right.aspx?mandatory=${ mandatory }&lno=${ lno }" target="_right"  class="check">取消揭榜</a>
                 <asp:Label ID="Label11" CssClass="jiage" runat="server" Text="价格">${ offer }元</asp:Label>
             </asp:Panel>
         </div>

@@ -186,6 +186,36 @@ public class Database
 
             return false;
     }
+    public bool DeleteRelationship(int tableName, int no, int user)
+    ///函数名： DeleteRelationship
+    //功能：  删除预定/揭榜信息
+    //输入参数：tableName: 表明（预定表为1，揭榜表为2）;no: 编号。
+    //返回值： 删除成功返回true,否则为false
+    {
+        if (tableName == 1)
+        {
+            string sql = "delete from OrderRelationship where bno = '" + no + "' AND buyer = '" + user + "'";
+            if (update(sql))
+
+                return true;
+            else
+
+                return false;
+        }
+        if (tableName == 2)
+        {
+            string sql = "delete from RewardRelationship where lno = '" + no + "' AND mandatory = '" + user + "'";
+            if (update(sql))
+
+                return true;
+            else
+
+                return false;
+        }
+        else
+
+            return false;
+    }
     public bool Delete(int tableName, int no)
     ///函数名： Delete
     //功能：  删除书籍/悬赏信息
