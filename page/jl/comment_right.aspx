@@ -19,6 +19,9 @@
 <body>
     <form id="form1" runat="server">
             <asp:Panel ID="Panel2" runat="server">
+                <asp:Panel ID="div_comment" runat="server">
+                    <asp:Label ID="lab_comment" runat="server" Text="评论区"></asp:Label>
+                </asp:Panel>
                 <!--标题栏-->
                 <div class="book_div" id="div_lab">
                 <asp:Panel CssClass="xs_name" runat="server">
@@ -76,7 +79,7 @@
             <!-- item -->
         <div class="col-lg-4 book_div">
             <asp:Panel CssClass="xs_name" runat="server">
-                <a href="reward_left.aspx?id=${no}" target="_left"><asp:Label ID="Label10" runat="server" >${title}</asp:Label></a>
+                <a href="comment_left.aspx?id=${no}" target="_left"><asp:Label ID="Label10" runat="server" >${title}</asp:Label></a>
             </asp:Panel>
         </div>
         <!-- end item -->
@@ -93,7 +96,7 @@
             //    { "title": "第一条", "no": "12" },
             //];
 
-            $("#gooods-item").tmpl(data).appendTo("#items-container");
+            $("#gooods-item").tmpl(a).appendTo("#items-container");
 
 
         });

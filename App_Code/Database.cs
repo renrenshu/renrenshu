@@ -116,6 +116,21 @@ public class Database
 
             return false;
     }
+    /// <summary>
+    /// 改变网站状态
+    /// </summary>
+    /// <param name="state"> 网站状态值</param>
+    /// <returns></returns>
+    public bool Modifstate(bool state)
+    {
+        string sql = "update state set webstate = '" + state + "'";
+        if (update(sql))
+
+            return true;
+        else
+
+            return false;
+    }
 
     public bool Add(int tableName, string name, string author, string press, float price,string intro, string picturePath)
     //函数名：Add

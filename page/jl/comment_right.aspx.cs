@@ -152,14 +152,14 @@ public partial class page_jl_comment_right : System.Web.UI.Page
             check = data.addcomment(txt_title.Text.ToString().Trim(), txt_content.Text.ToString().Trim(), "天黑");
             if (check == true)
             {
-                Page.ClientScript.RegisterStartupScript(this.GetType(), "", "<script>alert('发表成功！')</script>");
+                Page.ClientScript.RegisterStartupScript(this.GetType(), "",
+                "<script>alert('发表成功！');location.href='comment_right.aspx'</script>");
             }
             else
             {
-                Page.ClientScript.RegisterStartupScript(this.GetType(), "", "<script>alert('发表失败！')</script>");
+                Page.ClientScript.RegisterStartupScript(this.GetType(), "",
+                "<script>alert('发表失败！');location.href='comment_right.aspx'</script>");
             }
         }
-        //string url_right = "comment_right.aspx?pagenum=" + pagecurrent.ToString();
-        //Response.Redirect(url_right);
     }
 }

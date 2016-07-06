@@ -7,6 +7,7 @@ using System.Web.UI;
 using System.Web.UI.WebControls;
 
 
+
 public partial class page_yw_AddBook : System.Web.UI.Page
 {
     string noimg = "http://localhost:52863/image/nophoto.jpg";
