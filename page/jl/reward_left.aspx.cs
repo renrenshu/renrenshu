@@ -37,4 +37,26 @@ public partial class page_jl_Default : System.Web.UI.Page
         rd.price = ds.Tables["base"].Rows[0]["lprice"].ToString();
         rd.picture = ds.Tables["base"].Rows[0]["lpicture"].ToString();
     }
+    protected void book_order_Click(object sender, EventArgs e)
+    {
+        if (Session["id"] != null)
+        {
+            string uid = Session["id"].ToString().Trim();
+            string sql1 = "insert into u_l (uid, lno) values ('" + uid + "','" + rd.no + "')";
+            bool check = data.update(sql1);
+            if (check == true)
+            {
+                Response.Write("<script>alert('揭榜成功！')</script>");
+            }
+            else
+            {
+                Response.Write("<script>alert('揭榜失败！')</script>");
+            }
+        }
+        else
+        {
+            Page.ClientScript.RegisterStartupScript(this.GetType(), "",
+                "<script>alert('还未登录，请先登录！')</script>");
+        }
+    }
 }

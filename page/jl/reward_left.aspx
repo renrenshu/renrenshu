@@ -36,7 +36,7 @@
                     <asp:Label ID="Label4" runat="server" ><%=rd.price %></asp:Label>
                 </div>
                 <div>
-                    <asp:Button ID="book_order" runat="server" Text="揭榜" />
+                    <asp:Button ID="book_order" runat="server" Text="揭榜" OnClick="book_order_Click" />
                 </div>
             </asp:Panel>
             <asp:Panel ID="information" runat="server">

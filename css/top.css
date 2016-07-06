@@ -11,7 +11,7 @@
     padding:0,0,0,0;
 }
 #menu{
-    height:30px;
+    height:40px;
     background-color:#502F1E;
     margin:0,0,0,0;
     padding:0,0,0,0;
@@ -23,7 +23,6 @@
 }
 #logn{
     height:30px;
-    line-height: 30px;
     float:right;
     color:white;
     margin:auto;

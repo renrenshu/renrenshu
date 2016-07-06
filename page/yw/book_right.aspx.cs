@@ -17,10 +17,19 @@ public partial class page_yw_book_right : System.Web.UI.Page
     //pagecurrent：当前页码； pagecount:总页数
     public int pagecurrent = 1;
     public int pagecount;
+    int pagenum = 1;
     protected void Page_Load(object sender, EventArgs e)
     {
+        if(Request.QueryString["sql"] != null)
+        {
+            sql = Request.QueryString["sql"].ToString().Trim();
+        }
+        getds();
         //得到页面传递的页码
-        int pagenum = Convert.ToInt32( Request.QueryString["pagenum"]);
+        if (Request.QueryString["pagenum"] != null)
+        {
+            pagenum = Convert.ToInt32(Request.QueryString["pagenum"]);
+        }
         getdata(pagenum);
         Page.DataBind();
     }
@@ -31,11 +40,15 @@ public partial class page_yw_book_right : System.Web.UI.Page
         string result = serializer.Serialize(bk);
         return result;
     }
+    //将数据加载到DataSet
+    public void getds()
+    {
+        ds = data.query(sql);
+    }
     //获取数据(ab为页面获取的页码)
     public void getdata(int pagenum)
     {
         
-        ds = data.query(sql);
         // 取得总页数
         int a = ds.Tables["base"].Rows.Count % 6;
         if(a > 0)
@@ -123,5 +136,21 @@ public partial class page_yw_book_right : System.Web.UI.Page
             string url_right = "book_right.aspx?pagenum=" + pagecurrent.ToString();
             Response.Redirect(url_right);
         }
+    }
+    protected void btn_find_Click(object sender, EventArgs e)
+    {
+        if(book_find.Text==null)
+        {
+            Response.Write("<script>alert('请填写搜索书籍名！')</script>");
+        }
+        else
+        {
+            string findstr = book_find.Text.ToString().Trim();
+            string sqlfind = "select * from Stack where bname like '% " + findstr + "%'";
+            string url_right = "book_right.aspx?sql=" + sqlfind;
+            Response.Redirect(url_right);
+            
+        }
+        
     }
 }

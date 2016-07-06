@@ -46,7 +46,7 @@
                     <asp:Label ID="Label4" runat="server" ><%=bk.price %></asp:Label>
                 </div>
                 <div>
-                    <asp:Button ID="book_order" runat="server" Text="预订" />
+                    <asp:Button ID="book_order" runat="server" Text="预订" OnClick="book_order_Click" />
                 </div>
             </asp:Panel>
             <asp:Panel ID="information" runat="server">

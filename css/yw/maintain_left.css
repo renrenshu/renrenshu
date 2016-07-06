@@ -1,0 +1,25 @@
+﻿body {
+    background-color:#b06b6b;
+}
+#maintain_left{
+    font-size:xx-large;
+    color:#6F605A;
+    font-weight:bold;
+    font-family:YouYuan;
+}
+#div_webstate{
+    font-size:xx-large;
+    color:#6F605A;
+    font-weight:bold;
+    font-family:YouYuan;
+    height:20%;
+    text-align:center;
+}
+#div_manage{
+    font-size:xx-large;
+    color:#6F605A;
+    font-weight:bold;
+    font-family:YouYuan;
+    height:20%;
+    text-align:center;
+}

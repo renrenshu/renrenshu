@@ -1,4 +1,4 @@
-﻿<%@ Page Language="C#" AutoEventWireup="true" CodeFile="top.aspx.cs" Inherits="page_yw_top" %>
+﻿<%@ Page Language="C#" AutoEventWireup="true" CodeFile="top1.aspx.cs" Inherits="page_yw_top1" %>
 
 <!DOCTYPE html>
 
@@ -21,13 +21,16 @@
                         <asp:TableCell cssclass="menu_a" runat="server" Height="30px" Width="50px"><a href="book.html" target ="_parent">书库</a></asp:TableCell>
                         <asp:TableCell cssclass="menu_a" runat="server" Height="30px" Width="50px"><a href="../jl/reward.html" target ="_parent">悬赏</a></asp:TableCell>
                         <asp:TableCell cssclass="menu_a" runat="server" Height="30px" Width="50px"><a href="../jl/comment.html" target ="_parent">评论区</a></asp:TableCell>
-                        <asp:TableCell cssclass="menu_a" runat="server" Height="30px" Width="70px"><a>个人中心</a></asp:TableCell>
-                        <asp:TableCell cssclass="menu_a" runat="server" Height="30px" Width="70px"><a>维护</a></asp:TableCell>
+                        <asp:TableCell cssclass="menu_a" runat="server" Height="30px" Width="70px"><a href="../lxy/personal.html" target="_parent">个人中心</a></asp:TableCell>
+                        <asp:TableCell cssclass="menu_a" runat="server" Height="30px" Width="70px"><a href="maintain.html" target="_parent">维护</a></asp:TableCell>
                     </asp:TableRow>
                 </asp:Table>
                 </div>
                 <div id="logn">
-                   <a class="menu_a" href="../lxy/login.aspx" target ="_parent">登录</a>
+                   <asp:Label ID="show_name" runat="server" Text="Label" Visible="False"></asp:Label>
+                   <a class="menu_a"  href="../lxy/login.aspx" target ="_parent">
+                        <asp:Label ID="a_logn" runat="server" Text="Label">登录</asp:Label>
+                   </a>
                 </div>
             </div> 
     </form>

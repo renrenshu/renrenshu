@@ -8,8 +8,16 @@
     font-weight:bold;
     font-family:YouYuan;
 }
-.items-body {
-    margin-top: 60px;
+
+#div_comment{
+    width:40%;
+    text-align:center;
+    margin-left:auto;
+    margin-right:auto;
+    font-size:xx-large;
+    color:#6F605A;
+    font-weight:bold;
+    font-family:YouYuan;
 }
 .book_div{
     margin-left:auto;
@@ -36,7 +44,7 @@
     margin-right:auto;
     top:30px;
     position:relative;
-    font-size:large;
+    font-size:medium;
     color:#6F605A;
     font-weight:bold;
     font-family:YouYuan;
