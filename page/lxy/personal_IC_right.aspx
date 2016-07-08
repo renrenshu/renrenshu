@@ -72,9 +72,9 @@
             var container = $("#items-container");
 
             //data = [
-            //    { "picture": "../../upload/1.png", "price": "5", "name": "asd" ,"time":"17:38"},
-            //    { "picture": "../../upload/1.png", "price": "5", "name": "asd","time":"17:38" },
-            //    { "picture": "../../upload/1.png", "price": "5", "name": "asd","time":"17:38" },
+            //    { "picture": "../../upload/1.png", "offer": "5", "name": "asd" ,"time":"17:38"},
+            //    { "picture": "../../upload/1.png", "offer": "5", "name": "asd","time":"17:38" },
+            //    { "picture": "../../upload/1.png", "offer": "5", "name": "asd","time":"17:38" },
             //];
 
             $("#gooods-item").tmpl(a).appendTo("#items-container");

@@ -166,7 +166,7 @@ public class Database
         {
             if (picturePath != null)
             {
-                string sql = "insert into List (lname, lauthor, lpress, loffer, ltime, lintro, lpicture) values ( '" + name + "', '" + author + "', '" + press + "', '" + price + "', '" + time + "', '" + picturePath + "', '" + intro + "')";
+                string sql = "insert into List (lname, lauthor, lpress, loffer, ltime, lintro, lpicture) values ( '" + name + "', '" + author + "', '" + press + "', '" + price + "', '" + time + "', '" + intro + "', '" + picturePath + "')";
                 if (update(sql))
 
                     return true;

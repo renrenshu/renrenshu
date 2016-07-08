@@ -51,6 +51,10 @@ public partial class page_lxy_personal_IB_right : System.Web.UI.Page
         {
             pagecount = dso.Tables["base"].Rows.Count / 4;
         }
+        if(pagecount == 0)
+        {
+            pagecount = 1;
+        }
         //将页面传递的页码赋给pagecurrent
         if (pagenum > 0 && pagenum <= pagecount)
         {

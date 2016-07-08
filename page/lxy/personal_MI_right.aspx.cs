@@ -11,11 +11,10 @@ public partial class page_lxy_personal_MI_right : System.Web.UI.Page
     int id;
     protected void Page_Load(object sender, EventArgs e)
     {
-        if (Session["id"] == null)
+        if (Session["id"] != null)
         {
-            Response.Write("<script>alert('未登录，不能查看个人中心，请登录!');window.location.href ='login.aspx'</script>");
+            id = Convert.ToInt32(Session["id"].ToString());
         }
-        id = Convert.ToInt32(Session["id"].ToString());
         DataSet ds = new DataSet();
         Users people = new Users();
         ds = people.query();

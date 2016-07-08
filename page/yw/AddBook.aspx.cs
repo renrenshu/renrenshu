@@ -62,7 +62,7 @@ public partial class page_yw_AddBook : System.Web.UI.Page
                         price, txt_jianjie.Text.Trim(),save);
                     string sql = "select max(bno) from Stack";
                     DataSet ds = ba.query(sql);
-                    string bno = ds.Tables["base"].Rows[0]["bno"].ToString().Trim();
+                    string bno = ds.Tables["base"].Rows[0][0].ToString().Trim();
                     string sql1 = "insert into U_S (uid, bno) values('"+ Session["id"].ToString().Trim() + "','" +bno +"')";
                     check1 = ba.update(sql1);
 
